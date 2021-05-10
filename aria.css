@@ -1,0 +1,150 @@
+
+/* [aria-label] as tooltip */
+[aria-label]::before {
+  content:attr(aria-label);
+  position:absolute;
+  transform:translate(-1rem, -130%);
+  display:none;
+  border-radius:3px;
+  padding:.2rem .5rem;
+  filter: drop-shadow(0 0 .2em #0008);
+  background-color:#000;
+  color:#fff;
+  font-size:.7rem;
+  pointer-events:none;
+
+  /* add arrow */
+  border-width:0 0 .7rem 0;
+  border-color:transparent;
+  border-style:solid;
+  background-color: transparent;
+  background-image:
+    linear-gradient(#000,#000),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><path d="M12 21L0 3h24z"/></svg>');
+  background-repeat: no-repeat, no-repeat;
+  background-origin: padding-box, border-box;
+  background-size: 100%, auto 1rem;
+  background-position: 0 0, bottom 0 left .8rem;
+  transform:translate(-1rem, -100%);
+  /**/
+}
+[aria-label]:focus::before {
+  display:block;
+}
+[aria-label]:hover::before {
+  display:block;
+}
+label[aria-label]:focus-within::before {
+  display:block;
+}
+
+
+/* tabs-controls */
+/*[role="tablist"] {} /* no style, there can be also other contents inside */
+[role="tab"] {
+  background-color:transparent;
+  color:inherit;
+  border-bottom:solid transparent;
+  border-width:0 0 .2rem 0;
+  border-radius:0;
+  white-space:nowrap;
+  cursor:pointer;
+  padding:calc(var(--gap) / 4) calc(var(--gap) / 2);
+  margin:0;
+}
+[aria-selected="true"] {
+  border-bottom-color:var(--color);
+}
+[role="tab"]:hover ,
+[role="tab"]:focus {
+    background-color:#0000000a;
+}
+[role="tabpanel"] {
+  padding: var(--gap, 1rem);
+  xoverflow: auto;
+}
+
+/* more */
+[aria-controls] {
+  cursor: pointer;
+}
+[aria-busy=true] {
+  cursor: progress;
+}
+
+
+/* banner navigation */
+[role=banner] nav li {
+  position:relative;
+  white-space:nowrap;
+  background:var(--color);
+  color:var(--color-light);
+}
+[role=banner] nav > ul {
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin:0;
+}
+[role=banner] nav ul ul {
+  position:absolute;
+  xdisplay:none;
+  transition-duration: .4s;
+  visibility:hidden;
+  opacity:0;
+}
+[role=banner] nav li:focus-within > ul ,
+[role=banner] nav li:hover > ul {
+  xdisplay:block;
+  visibility:visible;
+  opacity:1;
+}
+[role=banner] nav ul {
+  padding:0;
+}
+[role=banner] nav a {
+  color:inherit;
+  padding:.2rem .5rem;
+  display:inline-block;
+}
+
+/* role=banner *
+[role=banner] {
+  position:sticky;
+  top:0;
+  left:0;
+  right:0;
+  background-color:#fffb;
+}
+[role=banner] .lx-width {
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items:baseline;
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
+[role=banner] .lx-width > * {
+  margin:0;
+}
+[role=banner] .lx-width > h1 {
+  margin:auto;
+}
+/**/
+
+
+
+/*
+sticky footer plugin
+main {
+  background-color:var(--color-bg);
+}
+[role=contentinfo] {
+  position:sticky;
+  z-index:-1;
+  bottom:0;
+  left:0;
+  right:0;
+}
+*/
