@@ -31,8 +31,6 @@ html {
   --gap-m:  calc(var(--gap)   * 1.618);
   --gap-l:  calc(var(--gap-m) * 1.618);
   --gap-x:  calc(var(--gap-l) * 1.618);
-
-
   */
 }
 @media (prefers-color-scheme: dark) {
