@@ -92,11 +92,9 @@ select:not([size],[multiple]) {
 	align-items:center;
 	justify-content: center;
 	color:#fff;
-	font-size:.9em;
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:normal;
-	xoverflow:hidden;
-	font-size:.8em;
+	font-size:.65em;
 }
 [type=radio]:checked::before ,
 [type=checkbox]:checked::before {
