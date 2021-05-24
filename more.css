@@ -33,11 +33,11 @@ ul > li {
     /* *
 }
 /* reset *
-.lx-rst ul {
+.u1-rst ul {
 	padding-left: 1.6em;
 	list-style-type: disc;
 }
-.lx-rst ul li {
+.u1-rst ul li {
 	padding:0;
 	background-image:none;
 }

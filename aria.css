@@ -116,7 +116,7 @@ label[aria-label]:focus-within::before {
   right:0;
   background-color:#fffb;
 }
-[role=banner] .lx-width {
+[role=banner] .u1-width {
   display:flex;
   gap:1rem;
   flex-wrap:wrap;
@@ -125,10 +125,10 @@ label[aria-label]:focus-within::before {
   margin-top:1rem;
   margin-bottom:1rem;
 }
-[role=banner] .lx-width > * {
+[role=banner] .u1-width > * {
   margin:0;
 }
-[role=banner] .lx-width > h1 {
+[role=banner] .u1-width > h1 {
   margin:auto;
 }
 /**/
