@@ -1,0 +1,10 @@
+body {
+    max-width:var(--width);
+    padding:var(--gap);
+
+    display: grid; /* center content. Margins will not collapse :/ */
+    place-content: center stretch;
+}
+body > * {
+    min-width:0; /* gap makes min-width = content-width, in some cases it will overflow */
+}

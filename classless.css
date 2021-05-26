@@ -2,190 +2,184 @@
 /* https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/style.css */
 
 html {
-  background-color:var(--color-bg);
-  color:var(--color-text);
-
-	accent-color: var(--color); /* currently chromium canary */
-
-  font-family:var(--font);
-  font-size:calc(13px + .7vmin);
-
-  -webkit-hyphens:auto;
-  hyphens:auto;
-
-  /* consistent y-scrollbar on all pages and on dynamic content
-  when scrollbar-gutter is supported test and use:
-  overflow-y: auto;
-  scrollbar-gutter: stable;
-  */
-  overflow-y: scroll;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    accent-color: var(--color);
+    /* currently chromium canary */
+    font-family: var(--font);
+    font-size: calc(13px + .7vmin);
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 body {
-  max-width:var(--width);
-  padding:var(--gap);
-
-  display: grid; /* center content. Margins will not collapse :/ */
-  place-content: center stretch;
-}
-body > * {
-  min-width:0; /* gap makes min-width = content-width, in some cases it will overflow */
+    font-size:max(1rem, 16px);
 }
 a {
-  color:var(--color);
-  xtransition:color .2s; /* ff flickers on visited-color-change https://bugzilla.mozilla.org/show_bug.cgi?id=868975 */
+    color: var(--color);
+    xtransition: color .2s; /* ff flickers on visited-color-change https://bugzilla.mozilla.org/show_bug.cgi?id=868975 */
 }
 a:visited {
-  color:var(--color-text);
+    color: var(--color-text);
 }
-a:hover ,
-a:focus {
-  color:var(--color-text);
+a:hover, a:focus {
+    color: var(--color-text);
 }
-a[download] ,
-a[target] {
-  text-decoration:none;
+a[download], a[target] {
+    text-decoration: none;
 }
 a[target]::after {
-  content: '🠆';
-  margin-left:.2em;
+    content: '🠆';
+    margin-left: .2em;
 }
 a[download]::after {
-  content: ' 🠇'; /* 🠇⤵↓ */
-  margin-left:.2em;
+    content: ' 🠇'; /* 🠇⤵↓ */
+    margin-left: .2em;
 }
-
 hr {
-  color:var(--color-light);
-  margin:calc(var(--gap) * 2) 0;
+    color: var(--color-light);
+    margin: calc(var(--gap) * 2) 0;
 }
 
-/*
-:is(h1,h2,h3,h4,h5,h6,p):first-child {
+
+/* future: *
+:where(h1,h2,h3,h4,h5,h6,p,ul,ol):first-child {
   margin-top:0;
 }
-:is(h1,h2,h3,h4,h5,h6,p):last-child {
+:where(h1,h2,h3,h4,h5,h6,p,ul,ol):last-child {
   margin-bottom:0;
 }
-*/
+/* */
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, ul:first-child, ol:first-child {
+    margin-top:0;
+}
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, p:last-child, ul:last-child, ol:last-child {
+    margin-bottom:0;
+}
+/* */
 
-table {
-  width: 100%;
-}
+
+table { width: 100%; }
 td, th {
-  padding: 0.5em;
-  padding: calc(var(--gap) / 2);
-  border-bottom: 1px solid var(--color-light);
+    padding: .5em;
+    padding: calc(var(--gap) / 2);
+    border-bottom: 1px solid var(--color-light);
 }
+/* focus style */
 :focus-visible {
-  outline: .16rem dotted var(--color-text);
-  outline-offset: .25rem;
-  xtransition: outline-offset .1s ease;
+    outline: .4rem solid hsl(var(--hs), 25%, .2);
+    outline-offset:0;
+    transition: .15s;
 }
 :focus:not(:focus-visible) {
-  outline-width: 0;
-}
-blockquote {
-  margin:0;
-  padding: calc(var(--gap) / 2);
-  padding-left: var(--gap);
-  border-left: 5px solid var(--color);
-  background-color: var(--color-light);
-  border-radius:var(--radius);
-}
-pre {
-  background-color: var(--color-light);
-  padding: var(--gap);
-  overflow-x: auto;
-  border-radius:var(--radius);
-}
-code {
-  font-size: 0.9em;
-  padding: 0 0.5em;
-  background-color: var(--color-light);
-  white-space: pre-wrap;
-  box-decoration-break: clone;
-  line-height:1;
-}
-mark {
-  background-color: hsl(var(--hsl-h), calc(var(--hsl-s) * 4), 70%, 0.5);
-  background-color: hsl(var(--hsl-h), 100%, 70%, 0.5);
-  padding:0 0.15em;
-}
-table {
-  xfont-size:.8rem;
+    outline-width: 0;
 }
 
+blockquote {
+    margin: 0;
+    padding: calc(var(--gap) / 2);
+    padding-left: var(--gap);
+    border-left: 5px solid var(--color);
+    background-color: var(--color-light);
+    border-radius: var(--radius);
+}
+
+pre {
+    background-color: var(--color-light);
+    padding: var(--gap);
+    overflow-x: auto;
+    border-radius: var(--radius);
+}
+
+code {
+    font-size: 0.9em;
+    padding: 0 0.5em;
+    background-color: var(--color-light);
+    white-space: pre-wrap;
+    box-decoration-break: clone;
+    line-height: 1;
+}
+
+mark {
+    background-color: hsl(var(--hsl-h), calc(var(--hsl-s) * 4), 70%, 0.5);
+    background-color: hsl(var(--hsl-h), 100%, 70%, 0.5);
+    padding: 0 0.15em;
+}
+
+table {
+    xfont-size: .8rem;
+}
 
 /* FORM */
 
 /* all inputs, buttons */
 input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
-	box-sizing:border-box;
-	padding: .2em .4em;
-	font-size:.9rem;
-  font-family:var(--font);
-	max-width:100%; /* todo: neu ok?*/
-  xborder:1px solid;
-  border-radius:var(--radius);
-  /* min-height:1.3em; todo? for select, input same height in chrome, firefox has same height if they have borders? or line-height: 1.2;? line-height can not be set on select */
+    box-sizing: border-box;
+    padding: .2em .4em;
+    font-size: .9rem;
+    font-family: var(--font);
+    max-width: 100%;
+    /* todo: neu ok?*/
+    xborder: 1px solid;
+    border-radius: var(--radius);
+    /* min-height:1.3em; todo? for select, input same height in chrome, firefox has same height if they have borders? or line-height: 1.2;? line-height can not be set on select */
 }
-/* text-inputs */
-input, textarea {
-	width:15em;
-}
-[type=radio], [type=checkbox] {
-  width:auto;
-}
+
+
 /* file-input */
 [type=file] {
-  padding-top:0;
-  padding-bottom:0;
-  padding-left:0;
-  border:none;
-  background-color:var(--color-light);
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border: none;
+    background-color: var(--color-light);
 }
+
 /* buttons */
-button, ::file-selector-button, ::-webkit-file-upload-button, .btn { /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
-  transition:color .2s;
-  background-color:var(--color);
-  color:var(--color-bg);
-  border-color:transparent;
-  padding-left:1em;
-  padding-right:1em;
-  transition:background-color .1s;
+button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
+    /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
+    transition: color .2s;
+    background-color: var(--color);
+    color: var(--color-bg);
+    border-color: transparent;
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: background-color .1s;
 }
 /* buttons hover */
 button:hover:not([disabled]), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn {
-  background-color:var(--color-dark);
+    background-color: var(--color-dark);
 }
 /* buttons disabled, todo all elements having disabled-attribute */
 button[disabled] {
-    opacity:.5;
+    opacity: .5;
 }
 /* file-buttons */
-::file-selector-button, ::-webkit-file-upload-button, select[size], /* chrome */ select[multiple] /* chrome */ {
-  border-top-right-radius: 0; /* recheck: border-end-end-radius supported? (-safari) */
-  border-bottom-right-radius: 0;
+::file-selector-button, ::-webkit-file-upload-button, select[size], /* chrome */ select[multiple] {
+    border-top-right-radius: 0;/* recheck: border-end-end-radius supported? (-safari) */
+    border-bottom-right-radius: 0;
 }
+
 /* figure */
 figure {
-  display:flex;
-  justify-content: center;
-  flex-direction: column;
-  padding:calc(var(--gap) / 4);
-  margin:calc(var(--gap) * 2) var(--gap);
-  font-size:1.2rem;
-  box-shadow:var(--shadow);
-  border-radius:var(--radius);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: calc(var(--gap) / 4);
+    margin: calc(var(--gap) * 2) var(--gap);
+    font-size: 1.2rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
 }
-figure > img {
-  border-radius:var(--radius);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+
+figure>img {
+    border-radius: var(--radius);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
+
 figcaption {
-  opacity:.7;
-  font-size:.9rem;
-  font-style: italic;
-  text-align:center;
+    opacity: .7;
+    font-size: .9rem;
+    font-style: italic;
+    text-align: center;
 }

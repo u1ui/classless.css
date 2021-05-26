@@ -73,7 +73,7 @@ label[aria-label]:focus-within::before {
 }
 
 
-/* banner navigation */
+/* banner navigation * moved to conventions
 [role=banner] nav li {
   position:relative;
   white-space:nowrap;
@@ -88,14 +88,12 @@ label[aria-label]:focus-within::before {
 }
 [role=banner] nav ul ul {
   position:absolute;
-  xdisplay:none;
   transition-duration: .4s;
   visibility:hidden;
   opacity:0;
 }
 [role=banner] nav li:focus-within > ul ,
 [role=banner] nav li:hover > ul {
-  xdisplay:block;
   visibility:visible;
   opacity:1;
 }

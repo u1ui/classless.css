@@ -1,0 +1,41 @@
+/* header nav */
+[role=banner] nav > ul { display:flex; }
+[role=banner] nav > ul > li { flex:1 1 auto; }
+[role=banner] nav > ul > li > a { text-align:center; }
+[role=banner] nav ul { padding:0; }
+[role=banner] nav li { position:relative; }
+[role=banner] nav a {
+	padding:.5em 1em;
+	display:block;
+}
+[role=banner] nav li > ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+	min-width: 100%;
+	white-space:nowrap;
+	transition-duration:.4s;
+	visibility:hidden;
+	opacity:0;
+}
+[role=banner] nav li:hover > ul ,
+[role=banner] nav li:focus-within > ul {
+	visibility:visible;
+    opacity:1;
+}
+
+/* customize */
+[role=banner] nav li > ul {
+	background-color:rgba(255,255,255,.9);
+	color:var(--color-text);
+	-webkit-backdrop-filter:blur(3px);
+	backdrop-filter:blur(3px);
+}
+
+[role=banner] nav li > ul a.cmsActive,
+[role=banner] nav li > ul a:hover,
+[role=banner] nav li > ul a:focus-within {
+	background-color:var(--color);
+	color:#fff;
+}
