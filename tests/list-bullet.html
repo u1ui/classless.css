@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level.css TEST</title>
+  <meta name="viewport" content="width=device-width">
+
+  <!--script src="./test.js" type=module></script>
+
+  <link rel="stylesheet" href="../../norm.css/norm.css">
+  <link rel="stylesheet" href="../../base.css/base.css">
+  <link rel="stylesheet" href="../../base.css/nomotion.css" disabled>
+  <link rel="stylesheet" href="../../base.css/print.css" disabled>
+
+  <link rel="stylesheet" href="../variables.css">
+  <link rel="stylesheet" href="../variables.more.css">
+  <link rel="stylesheet" href="../classless.css">
+  <link rel="stylesheet" href="../aria.css" disabled>
+  <link rel="stylesheet" href="../more.css"-->
+
+  <style>
+    .marker ::marker {
+        content:'•';
+        content:url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><svg width="18" height="18" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"/></svg>');
+        content: "★\00a0\00a0";
+        font-size:.8em;
+        color:red;
+        xwhite-space: pre;
+    }
+    * {
+        content:' ';
+    }
+    .image ul {
+        list-style-type:'★  ';
+    }
+    .image ::marker {
+        font-size:.8em;
+        color:red;
+        xfont-style:italic;
+        xfont-family:monospace;
+        xfont-variant:small-caps;
+        xfont-variant-position:3em;
+        xfont-weight:bold;
+
+        xxxletter-spacing: 2em; /*no chrome*/
+        xxxline-height:6em; /* not in ff */
+        xxxvertical-align:sub;
+        xxxfont-variant-alternates:historical-forms;
+        xxxfont-feature-settings:"abvf";
+        xxxfont-kerning:none;
+        xxxfont-language-override:normal;
+        xxxletter-spacing: 2em;
+        xxxfont-size-adjust:100px;
+        xxxfont-stretch:condensed;
+        xxxfont-synthesis:weight;
+        xxxfont-variant-caps:titling-caps;
+    }
+
+    .noListStyle {
+        padding:0;
+        list-style:none !important;
+    }
+    .noListStyle li {
+        xdisplay:block;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+    <h1>Using ::marker</h1>
+    <div class="container marker">
+        <ul>
+            <li>Uniquely integrate standards compliant niche markets <br>standards compliant niche markets</li>
+            <li>Via 2.0 communities globally parallel task</li>
+            <li>Maintainable niche markets after bleeding-edge growth strategies</li>
+            <li>Dramatically aggregate strategic customer service</li>
+            <li>For prospective catalysts for change</li>
+        </ul>
+        <h3>unstyled List</h3>
+        <ul class=noListStyle>
+            <li>Uniquely integrate standards compliant niche markets <br>standards compliant niche markets</li>
+            <li>Via 2.0 communities globally parallel task</li>
+            <li>Maintainable niche markets after bleeding-edge growth strategies</li>
+            <li>Dramatically aggregate strategic customer service</li>
+            <li>For prospective catalysts for change</li>
+        </ul>
+    </div>
+
+
+    <h1>Using list-style-type:'string' and ::marker (color, font-size)</h1>
+    <div class="container image">
+        <ul>
+            <li>Uniquely integrate standards compliant niche markets <br>standards compliant niche markets</li>
+            <li>Via 2.0 communities globally parallel task</li>
+            <li>Maintainable niche markets after bleeding-edge growth strategies</li>
+            <li>Dramatically aggregate strategic customer service</li>
+            <li>For prospective catalysts for change</li>
+        </ul>
+        <h3>unstyled List</h3>
+        <ul class=noListStyle>
+            <li>Uniquely integrate standards compliant niche markets <br>standards compliant niche markets</li>
+            <li>Via 2.0 communities globally parallel task</li>
+            <li>Maintainable niche markets after bleeding-edge growth strategies</li>
+            <li>Dramatically aggregate strategic customer service</li>
+            <li>For prospective catalysts for change</li>
+        </ul>
+    </div>
+
+
+
+
+
+    <style>
+        body {
+            padding:3rem;
+        }
+        .container {
+            border:1px solid blue;
+        }
+    </style>

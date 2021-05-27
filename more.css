@@ -9,37 +9,15 @@ https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-contr
 /****************/
 /* custom list  */
 /****************/
-/* ul li { list-style-type: "• "; } overwrites "nav li" because it cames after */
-/* ul li { list-style-type: "· "; } /* small dot */
 /* li::marker { content: "• "; } /* ::marker is bad, its shown even if list-style:none*/
 
-/*
 ul {
-	padding:0;
-	list-style:none;
+	list-style-type:'•  '; /* ·•●⏺‣▶⏵✔⊚○◌🞅🞇🞉🖝⏵ */
+	padding-inline-start: 1em;
 }
-ul > li {
-	padding-left: 1em;
-	background-repeat: no-repeat;
-	background-position: 0.3em 0.68em;
-
-	/* image *
-	background-image: url("/list-image.svg"); /* todo inline *
-	background-size: .2em auto;
-
-	/* radial gradient *
-	background-image: radial-gradient(currentColor, currentColor 50%, transparent 50%, transparent);
-	background-size: .4em .4em;
-    /* *
-}
-/* reset *
-.u1-rst ul {
-	padding-left: 1.6em;
-	list-style-type: disc;
-}
-.u1-rst ul li {
-	padding:0;
-	background-image:none;
+ul > li::marker {
+	font-size:1em;
+	xcolor:var(--color);
 }
 
 /****************/
