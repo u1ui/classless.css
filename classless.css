@@ -4,8 +4,7 @@
 html {
     background-color: var(--color-bg);
     color: var(--color-text);
-    accent-color: var(--color);
-    /* currently chromium canary */
+    accent-color: var(--color); /* currently chromium canary */
     font-family: var(--font);
     font-size: calc(13px + .7vmin);
     -webkit-hyphens: auto;
@@ -168,6 +167,7 @@ figure {
     font-size: 1.2rem;
     box-shadow: var(--shadow);
     border-radius: var(--radius);
+    overflow:auto;
 }
 
 figure>img {
