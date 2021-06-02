@@ -100,7 +100,9 @@ code {
 mark {
     background-color: hsl(var(--hsl-h), calc(var(--hsl-s) * 4), 70%, 0.5);
     background-color: hsl(var(--hsl-h), 100%, 70%, 0.5);
-    padding: 0 0.15em;
+    /*
+    padding: 0 0.15em;  no padding as it it can be some part of a word,
+    maybe this? box-shadow: 0em 0em 0px 0.1em hsl(var(--hsl-h), 100%, 70%, 0.5) */
 }
 
 table {
