@@ -106,7 +106,10 @@ mark {
 }
 
 table {
-    xfont-size: .8rem;
+    font-size: max(.65em, 16px);
+}
+figure table {
+    white-space: nowrap;
 }
 
 /* FORM */
