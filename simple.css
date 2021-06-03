@@ -17,6 +17,6 @@ footer {
     text-align:center;
 }
 
-body > header {
+header {
     border-bottom:.1em solid var(--color);
 }
