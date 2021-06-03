@@ -68,8 +68,8 @@ td, th {
 
 /* focus style */
 :focus {
-    outline: .4rem solid hsl(var(--hs), 25%, .2);
-    outline-offset:0;
+    outline: .4rem solid hsl(var(--hsl), .2);
+    /* xoutline-offset:0; needed? */
     transition: .15s;
 }
 :focus:not(:focus-visible) { outline-width: 0; }
@@ -100,10 +100,9 @@ code {
 }
 
 mark {
-    background-color: hsl(var(--hsl-h), calc(var(--hsl-s) * 4), 70%, 0.5);
     background-color: hsl(var(--hsl-h), 100%, 70%, 0.5);
     /*
-    padding: 0 0.15em;  no padding as it it can be some part of a word,
+    padding: 0 0.15em;  no padding as it can be some part of a word,
     maybe this? box-shadow: 0em 0em 0px 0.1em hsl(var(--hsl-h), 100%, 70%, 0.5) */
 }
 
@@ -113,12 +112,12 @@ mark {
 input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
     box-sizing: border-box;
     padding: .2em .4em;
-    font-size: .9rem;
+    /* font-size: .9rem; */
     font-family: var(--font);
     max-width: 100%;
     /* todo: neu ok?*/
-    xborder: 1px solid;
-    border-radius: var(--radius);
+    /* xborder: 1px solid; */
+    border-radius: var(--radius); /* remove? */
     /* min-height:1.3em; todo? for select, input same height in chrome, firefox has same height if they have borders? or line-height: 1.2;? line-height can not be set on select */
 }
 
@@ -164,7 +163,7 @@ figure {
     flex-direction: column;
     padding: calc(var(--gap) / 4);
     margin: calc(var(--gap) * 2) var(--gap);
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     box-shadow: var(--shadow);
     border-radius: var(--radius);
     overflow:auto;
