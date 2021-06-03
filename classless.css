@@ -56,8 +56,10 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 }
 /* */
 
-
-table { width: 100%; }
+table {
+    width: 100%;
+    font-size: max(.65em, 16px);
+}
 td, th {
     padding: .5em;
     padding: calc(var(--gap) / 2);
@@ -103,13 +105,6 @@ mark {
     /*
     padding: 0 0.15em;  no padding as it it can be some part of a word,
     maybe this? box-shadow: 0em 0em 0px 0.1em hsl(var(--hsl-h), 100%, 70%, 0.5) */
-}
-
-table {
-    font-size: max(.65em, 16px);
-}
-figure table {
-    white-space: nowrap;
 }
 
 /* FORM */
@@ -173,12 +168,17 @@ figure {
     box-shadow: var(--shadow);
     border-radius: var(--radius);
     overflow:auto;
+    xmargin:auto;
 }
 
 figure>img {
     border-radius: var(--radius);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+figure table {
+    white-space: nowrap;
 }
 
 figcaption {
