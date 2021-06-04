@@ -28,10 +28,8 @@
   transform:translate(-1rem, -100%);
   /**/
 }
-[aria-label]:focus::before {
-  display:block;
-}
-[aria-label]:hover::before {
+
+[aria-label]:focus::before, [aria-label]:hover::before {
   display:block;
 }
 label[aria-label]:focus-within::before {

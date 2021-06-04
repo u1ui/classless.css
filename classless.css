@@ -158,11 +158,11 @@ button[disabled] {
 
 /* figure */
 figure {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: calc(var(--gap) / 4);
-    margin: calc(var(--gap) * 2) var(--gap);
+    xdisplay: flex;
+    xjustify-content: center;
+    xflex-direction: column;
+    padding:0;
+    margin: var(--gap);
     /* font-size: 1.2rem; */
     box-shadow: var(--shadow);
     border-radius: var(--radius);
