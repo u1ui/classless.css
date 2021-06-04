@@ -8,12 +8,7 @@
 
   <script src="./test.js" type=module></script>
 
-  <link rel="stylesheet" href="../../norm.css/oldies.css" disabled>
-  <link rel="stylesheet" href="../../norm.css/norm.css">
-  <link rel="stylesheet" href="../../base.css/base.css">
-  <link rel="stylesheet" href="../../base.css/beta.css">
-  <link rel="stylesheet" href="../../base.css/nomotion.css" disabled>
-  <link rel="stylesheet" href="../../base.css/print.css" disabled>
+  <link rel="stylesheet" href="../../base.css/full.css">
 
   <link rel="stylesheet" href="../variables.css">
   <link rel="stylesheet" href="../classless.css">
@@ -85,17 +80,25 @@
 </section>
 
 
-<section style="max-width:var(--width); font-family:var(--font); margin:auto; border:1px solid; box-shadow:var(--shadow); --shadow-size:2rem; border-radius:var(--radius); color:var(--color-text); background-color:var(--color-bg)">
+<section style="max-width:var(--width); font-family:var(--font); margin:auto; border:var(--line-width) var(--color-line) solid; box-shadow:var(--shadow); --shadow-size:2rem; border-radius:var(--radius); color:var(--color-text); background-color:var(--color-bg)">
 
     <h1>Demo</h1>
 
     <style style="display:block" contenteditable>
     html {
         --hsl-h: 60;
+        --hsl-s: 50%;
+        --hsl-l: 50%;
         --shadow-x:.1rem;
         --shadow-y:.8rem;
+        --color-line: var(--color-dark);
+        --line-width: 2px;
+
     }
     </style>
+
+    <hr>
+
     <ul>
         <li>background-color:var(--color-bg)
         <li>color:var(--color-text)

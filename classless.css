@@ -37,6 +37,9 @@ a[download]::after {
 hr {
     color: var(--color-light);
     margin: calc(var(--gap) * 2) 0;
+
+    border-width:var(--line-width);
+    border-color:var(--color-line);
 }
 
 
@@ -63,7 +66,10 @@ table {
 td, th {
     padding: .5em;
     padding: calc(var(--gap) / 2);
-    border-bottom: 1px solid var(--color-light);
+    border-style:solid;
+    border-width:0 0 var(--line-width) 0;
+    border-color:var(--color-line);
+
 }
 
 /* focus style */
@@ -110,7 +116,7 @@ mark {
 
 /* all inputs, buttons */
 input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
-    box-sizing: border-box;
+    xbox-sizing: border-box;
     padding: .2em .4em;
     /* font-size: .9rem; */
     font-family: var(--font);
@@ -119,6 +125,10 @@ input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-b
     /* xborder: 1px solid; */
     border-radius: var(--radius); /* remove? */
     /* min-height:1.3em; todo? for select, input same height in chrome, firefox has same height if they have borders? or line-height: 1.2;? line-height can not be set on select */
+
+    border-width:var(--line-width);
+    border-color:var(--color-line);
+
 }
 
 
