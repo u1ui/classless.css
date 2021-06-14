@@ -71,6 +71,8 @@ label[aria-label]:focus-within::before {
 }
 
 
+nav a[aria-current] { color:var(--color); } /* parent pages */
+nav a[aria-current=page] { font-weight:bold; } /* current page */
 
 /*
 sticky footer plugin

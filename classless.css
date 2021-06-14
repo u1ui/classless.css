@@ -164,6 +164,7 @@ button[disabled] {
 ::file-selector-button, ::-webkit-file-upload-button, select[size], /* chrome */ select[multiple] {
     border-top-right-radius: 0;/* recheck: border-end-end-radius supported? (-safari) */
     border-bottom-right-radius: 0;
+    margin: 0 .5em 0 0;
 }
 
 /* figure */

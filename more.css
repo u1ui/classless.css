@@ -163,7 +163,7 @@ select:not([size],[multiple]) {
 html {
 	--scrollbar-width-unit: .7rem;
 	--scrollbar-width: normal;
-	--scrollbar-color-track: var(--color-light);
+	--scrollbar-color-track: var(--color-area);
 	--scrollbar-color-thumb: var(--color);
 }
 * {
