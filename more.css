@@ -158,29 +158,24 @@ select:not([size],[multiple]) {
 /* scrollbars              */
 /***************************/
 html {
-	--scrollbar-width-unit: .7rem;
-	--scrollbar-width: normal;
-	--scrollbar-color-track: var(--color-area);
-	--scrollbar-color-thumb: var(--color);
+	--scrollbar-thin:;  /* space (: ;) => true, nospace (:;) = false  */
+	--scrollbar-color-track: var(--color-area, #f4f4f4);
+	--scrollbar-color-thumb: var(--color, #ccc);
 }
 * {
-	scrollbar-width: var(--scrollbar-width);
+	scrollbar-width: var(--scrollbar-thin) thin;
 	scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
 }
 ::-webkit-scrollbar {
-	width: var(--scrollbar-width-unit);
-	height: var(--scrollbar-width-unit);
+	width: var(--scrollbar-thin) 8px;
+	height: var(--scrollbar-thin) 8px;
 }
-::-webkit-scrollbar-track {
-	background: var(--scrollbar-color-track);
-}
-::-webkit-scrollbar-thumb {
-	background-color: var(--scrollbar-color-thumb);
-}
+::-webkit-scrollbar-track { background: var(--scrollbar-color-track); }
+::-webkit-scrollbar-thumb { background-color: var(--scrollbar-color-thumb); }
+
 /* select */
 select, textarea {
-	--scrollbar-width-unit: .4rem;
-	--scrollbar-width: thin;
+	--scrollbar-thin: ;
 }
 
 /***************************/
