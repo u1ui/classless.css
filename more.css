@@ -7,23 +7,26 @@ https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-contr
 /****************/
 /* custom list  */
 /****************/
+
 /* li::marker { content: "• "; } /* ::marker is bad, its shown even if list-style:none*/
 
 ul {
-	list-style-type:'•  '; /* ·•●⏺‣▶⏵✔⊚○◌🞅🞇🞉🖝⏵ */
+	list-style-type: '•  ';
+	/* ·•●⏺‣▶⏵✔⊚○◌🞅🞇🞉🖝 */
 	padding-inline-start: 1em;
 }
-ul > li::marker {
-	font-size:1em;
+
+ul>li::marker {
+	font-size: 1em;
 }
 
 /****************/
 /* custom select */
 /****************/
-select:not([size],[multiple]) {
-	-webkit-appearance:none;
-	appearance:none;
 
+select:not([size], [multiple]) {
+	-webkit-appearance: none;
+	appearance: none;
 	/* *
 	background-image:url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2021.3%2012.1%22%20fill%3D%22%23333333%22%3E%3Cpath%20d%3D%22M10.7%2012.1L0%201.5%201.4.1l9.3%209.2L19.9%200l1.4%201.4z%22%2F%3E%3C%2Fsvg%3E");
 	background-repeat:no-repeat;
@@ -31,15 +34,12 @@ select:not([size],[multiple]) {
 	background-position:right .3em top 50%;
 	padding-right:1.5em;
 	/* */
-
 	/* */
-	background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='4'><path d='M4 0h6L7 4'/></svg>");
-	background-repeat:no-repeat;
-	background-position:100% 50%;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='4'><path d='M4 0h6L7 4'/></svg>");
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
 	background-size: 1em;
-	padding-right:1em;
-
-
+	padding-right: 1em;
 	/*
 	only possible if in :where() so background-color can be overwritten
 	xbackground: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E") no-repeat right center / 1em;
@@ -50,130 +50,156 @@ select:not([size],[multiple]) {
 /***************************/
 /* custom check-/radiobox  */
 /***************************/
-[type=radio],
-[type=checkbox] {
+
+[type=radio], [type=checkbox] {
 	-webkit-appearance: none;
 	appearance: none;
 }
-[type=radio],
-[type=checkbox] {
+
+[type=radio], [type=checkbox] {
 	width: .9em;
 	height: .9em;
-	background-color:#fff;
+	background-color: #fff;
 	border: solid 1px;
 	position: relative;
-	border-radius:.15em;
-	padding:0;
+	border-radius: .15em;
+	padding: 0;
 }
-[type=radio]:checked,
-[type=checkbox]:checked {
-	border-color:var(--color, blue);
+
+[type=radio]:checked, [type=checkbox]:checked {
+	border-color: var(--color, blue);
 }
-[type=radio]::before ,
-[type=checkbox]::before {
+
+[type=radio]::before, [type=checkbox]::before {
 	content: "";
 	position: absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	display:flex;
-	align-items:center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
 	justify-content: center;
-	color:#fff;
-	font-family:Arial, Helvetica, sans-serif;
-	font-weight:normal;
-	font-size:.65em;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: .65em;
 }
-[type=radio]:checked::before ,
-[type=checkbox]:checked::before {
-	background-color:var(--color, blue);
+
+[type=radio]:checked::before, [type=checkbox]:checked::before {
+	background-color: var(--color, blue);
 }
+
 /* checkbox */
+
 [type=checkbox]:checked::before {
 	content: "✔";
 }
+
 /* radio */
+
 [type=radio] {
 	border-radius: 100%;
 }
+
 [type=radio]::before {
-	border-radius:inherit;
-	border:.15em solid #fff;;
+	border-radius: inherit;
+	border: .15em solid #fff;
+	;
 }
+
 /* disabled */
-[type=radio][disabled],
-[type=checkbox][disabled] {
-	opacity:.5;
+
+[type=radio][disabled], [type=checkbox][disabled] {
+	opacity: .5;
 }
+
 /* indeterminate */
-[type=radio]:indeterminate::before,
-[type=checkbox]:indeterminate::before {
-	color:currentColor;
-	font-size:.8em;
+
+[type=radio]:indeterminate::before, [type=checkbox]:indeterminate::before {
+	color: currentColor;
+	font-size: .8em;
 	content: "─";
 }
+
 /*
 	indicator (beta)
 	z-index can not be behinde checkbox, only behinde ::before
 */
+
 :is([type=radio], [type=checkbox]):not([disabled])::after {
-	content:'';
-	position:absolute;
-	top:-60%;
-	left:-60%;
-	right:-60%;
-	bottom:-60%;
-	border-radius:50%;
-	transition:background-color .3s;
+	content: '';
+	position: absolute;
+	top: -60%;
+	left: -60%;
+	right: -60%;
+	bottom: -60%;
+	border-radius: 50%;
+	transition: background-color .3s;
 }
+
 :is([type=radio], [type=checkbox]):hover::after {
-	background-color:#0001;
+	background-color: #0001;
 }
 
 /***************************/
 /* color input             */
 /***************************/
+
 [type=color] {
 	padding: 0;
 	border-radius: 100%;
 	width: 1.4em;
 	height: 1.4em;
-	border-width:1px;
+	border-width: 1px;
 	overflow: hidden;
-	box-shadow:0 0 .5em #0003;
-	cursor:pointer;
+	box-shadow: 0 0 .5em #0003;
+	cursor: pointer;
 }
+
 [type=color]::-moz-color-swatch {
-	border:none;
+	border: none;
 }
+
 [type=color]::-webkit-color-swatch {
-	border:none;
+	border: none;
 }
+
 [type=color]::-webkit-color-swatch-wrapper {
-	padding:0;
+	padding: 0;
 }
 
 /***************************/
 /* scrollbars              */
 /***************************/
+
 html {
-	--scrollbar-thin:;  /* space (: ;) => true, nospace (:;) = false  */
+	--scrollbar-thin:;
+	/* space (: ;) => true, nospace (:;) = false  */
 	--scrollbar-color-track: var(--color-area, #f4f4f4);
 	--scrollbar-color-thumb: var(--color, #ccc);
 }
+
 * {
 	scrollbar-width: var(--scrollbar-thin) thin;
 	scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
 }
+
 ::-webkit-scrollbar {
 	width: var(--scrollbar-thin) 8px;
 	height: var(--scrollbar-thin) 8px;
 }
-::-webkit-scrollbar-track { background: var(--scrollbar-color-track); }
-::-webkit-scrollbar-thumb { background-color: var(--scrollbar-color-thumb); }
+
+::-webkit-scrollbar-track {
+	background: var(--scrollbar-color-track);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--scrollbar-color-thumb);
+}
 
 /* select */
+
 select, textarea {
 	--scrollbar-thin: ;
 }
@@ -181,64 +207,77 @@ select, textarea {
 /***************************/
 /* range inputs            */
 /***************************/
+
 [type=range] {
 	background-color: transparent;
-	border:none;
+	border: none;
 	-webkit-appearance: none;
-	padding:0;
+	padding: 0;
 }
+
 /* todo where(webkit, moz) (forgiving) */
+
 [type=range]::-webkit-slider-runnable-track {
-	box-sizing:border-box;
-	height:.5em;
-	background:#fff;
-	border:1px solid #0008;
+	box-sizing: border-box;
+	height: .5em;
+	background: #fff;
+	border: 1px solid #0008;
 	border-radius: 1em;
-	cursor:pointer;
+	cursor: pointer;
 }
+
 [type=range]::-moz-range-track {
-	box-sizing:border-box;
-	height:.5em;
-	background:#fff;
-	border:1px solid #0008;
+	box-sizing: border-box;
+	height: .5em;
+	background: #fff;
+	border: 1px solid #0008;
 	border-radius: 1em;
-	cursor:pointer;
+	cursor: pointer;
 }
+
 [type=range]::-webkit-slider-thumb {
-	box-sizing:border-box;
+	box-sizing: border-box;
 	width: 1em;
 	height: 1em;
-	background:var(--color);
+	background: var(--color);
 	border-radius: 100%;
 	cursor: pointer;
-
 	margin-top: -.3em;
 	-webkit-appearance: none;
 }
+
 [type=range]::-moz-range-thumb {
-	box-sizing:border-box;
+	box-sizing: border-box;
 	width: 1em;
 	height: 1em;
-	background:var(--color);
+	background: var(--color);
 	border-radius: 100%;
 	cursor: pointer;
 }
 
-[type=range]:hover::-webkit-slider-thumb { box-shadow:0 0 0 .5em #0001 }
-[type=range]:hover::-moz-range-thumb     { box-shadow:0 0 0 .5em #0001 }
+[type=range]:hover::-webkit-slider-thumb {
+	box-shadow: 0 0 0 .5em #0001
+}
+
+[type=range]:hover::-moz-range-thumb {
+	box-shadow: 0 0 0 .5em #0001
+}
 
 /* autofill */
-:-webkit-autofill { /* also works for firefox! */
-	filter:none;
-    box-shadow: 0 0 0 100px var(--color-light) inset;
+
+:-webkit-autofill {
+	/* also works for firefox! */
+	filter: none;
+	box-shadow: 0 0 0 100px var(--color-light) inset;
 }
 
 /* autofill chrome */
-::selection {
-	background:var(--color);
-	color:#fff;
-}
 
+::selection {
+	xbackground: var(--color);
+	xcolor: #fff;
+	background: hsl(var(--hsl), 0.3);
+}
 
 /* Spin Buttons
 - bigger chromes spinners
@@ -259,5 +298,54 @@ input[type=number] {
 		padding-left:.2em;
 		padding-right:.2em;
 	}
+}
+/**/
+
+
+/***************************/
+/* details / summary       */
+/***************************/
+
+details { border-bottom: 1px solid var(--color-line); }
+summary {
+	padding:calc(var(--gap) / 2) 0;
+	line-height:1; /* to center floated ::after */
+}
+details[open] > summary { margin-bottom: calc(var(--gap) / 2 ); }
+details[open] { padding-bottom: calc(var(--gap) / 1); }
+
+/* nested *
+details details {
+	margin-inline:calc(var(--gap)/2);
+}
+/* */
+
+/*
+# custom icon
+- display:flex not working in safari 14
+needed?:
+summary::marker { display: none; }
+summary::-moz-list-bullet { xlist-style-type: none; }
+*/
+summary { list-style-type: none; }
+summary::-webkit-details-marker { display: none; }
+summary::after {
+	line-height:.9;
+	content:'⏵';
+	width: 1rem;
+	height: 1rem;
+	float: right;
+	transform: rotate(-0deg);
+	transition: transform .2s;
+	/* customize
+	font-family:--u1-ico-font;
+	background-image: var(--u1-icon-chevron);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 1rem auto;
+	*/
+}
+details[open] > summary::after {
+	transform: rotate(90deg);
 }
 /**/

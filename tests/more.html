@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="../aria.css" disabled>
   <link rel="stylesheet" href="../more.css">
 
+  <script src="../../js/init.js" type=module></script>
+
   <style>
     body {
       min-height:0;
@@ -175,9 +177,50 @@
     </script>
 </section>
 
-
-
 <section>
     <h1>input type=number</h1>
     <input type=number step=".5" min="-.5" max="4">
+</section>
+
+
+<section style="width:30rem">
+    <h1>details / summary</h1>
+
+    <details>
+        <summary>Security</summary>
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
+        </div>
+    </details>
+    <details>
+        <summary>Pricing</summary>
+        <div>
+            <ul>
+                <li>Cash on hand: $500.00</li>
+                <li>Current invoice: $75.30</li>
+                <li>Due date: 5/6/19</li>
+            </ul>
+        </div>
+    </details>
+    <details>
+        <summary>Nested</summary>
+
+        <details>
+            <summary>Sub-Detail 1</summary>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
+            </p>
+        </details>
+        <details>
+            <summary>Sub-Detail 2</summary>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
+            </p>
+        </details>
+
+    </details>
+
 </section>

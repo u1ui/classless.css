@@ -144,7 +144,6 @@ input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-b
 /* buttons */
 button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
     /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
-    transition: color .2s;
     background-color: var(--color);
     color: var(--color-bg);
     border-color: transparent;
