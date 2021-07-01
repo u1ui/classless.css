@@ -19,208 +19,224 @@
 
   <script src="../../js/init.js" type=module></script>
 
-  <style>
-    body {
-      min-height:0;
-      max-width:none;
-      display:flex;
-      flex-wrap:wrap;
-      gap:1rem;
-    }
-    body > * {
-      padding:1rem;
-      background:var(--color-area);
-      border-radius:4px;
-    }
-    section > :first-child {
-        margin-top:0;
-    }
-  </style>
 
 </head>
 
 <body>
 
-<section>
-    <h1>List Item</h1>
-    <ul>
-        <li>List item 1</li>
-        <li>List item 2</li>
-        <li>List item 3</li>
-        <li>List item 4</li>
-    </ul>
-</section>
+<style>
+.container {
+    min-height:0;
+    max-width:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+}
+section {
+    padding:1rem;
+    background:var(--color-area);
+    border-radius:4px;
+}
+section > :first-child {
+    margin-top:0;
+}
+</style>
 
-<section>
-    <h1>select arrow down</h1>
-    <table style="white-space:nowrap">
-        <tbody style="vertical-align:top">
-        <tr>
-            <td> Normal
-            <td> Size-Attribute <br><small> (not affected)</small>
-            <td> Multiple-Attribute <br><small> (not affected)</small>
-        <tr>
-            <td>
-                <select>
-                    <option>Option 1
-                    <option>Option 2
-                    <option>Option 3
-                </select>
-            <td>
-                <select size=2>
-                    <option>Option 1
-                    <option>Option 2
-                    <option>Option 3
-                </select>
-            <td>
-                <select multiple>
-                    <option>Option 1
-                    <option>Option 2
-                    <option>Option 3
-                </select>
-    </table>
-</section>
+<div class=container>
+    <section>
+        <h1>List Item</h1>
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </section>
 
-<section>
-    <h1>radio / checkbox</h1>
-    <table style="white-space:nowrap; text-align:center">
-        <tr>
-            <td style="text-align:right">
-            <td> No checked
-            <td> Checked
-            <td> disabled
-            <td> checked disabled
-            <td> indeterminate <small>todo</small>
-        <tr>
-            <td style="text-align:right"> Checkbox
-            <td> <input type=checkbox>
-            <td> <input type=checkbox checked>
-            <td> <input type=checkbox disabled>
-            <td> <input type=checkbox checked disabled>
-            <td> <input type=checkbox id=indeterminate1>
-        <tr>
-            <td style="text-align:right"> Radio
-            <td> <input type=radio name=radio>
-            <td> <input type=radio name=radio checked>
-            <td> <input type=radio name=radiox disabled>
-            <td> <input type=radio name=radiox checked disabled>
-            <td> <input type=radio id=indeterminate2>
-    </table>
-    <script>
-        console.log(indeterminate1)
-        indeterminate1.indeterminate = true;
-        indeterminate2.indeterminate = true;
-    </script>
-    <br>
-    <label>
-        <input type=checkbox> Has a label, hover it will show an indicator
-    </label>
-</section>
+    <section>
+        <h1>select arrow down</h1>
+        <table style="white-space:nowrap">
+            <tbody style="vertical-align:top">
+            <tr>
+                <td> Normal
+                <td> Size-Attribute <br><small> (not affected)</small>
+                <td> Multiple-Attribute <br><small> (not affected)</small>
+            <tr>
+                <td>
+                    <select>
+                        <option>Option 1
+                        <option>Option 2
+                        <option>Option 3
+                    </select>
+                <td>
+                    <select size=2>
+                        <option>Option 1
+                        <option>Option 2
+                        <option>Option 3
+                    </select>
+                <td>
+                    <select multiple>
+                        <option>Option 1
+                        <option>Option 2
+                        <option>Option 3
+                    </select>
+        </table>
+    </section>
+
+    <section>
+        <h1>radio / checkbox</h1>
+        <table style="white-space:nowrap; text-align:center">
+            <tr>
+                <td style="text-align:right">
+                <td> No checked
+                <td> Checked
+                <td> disabled
+                <td> checked disabled
+                <td> indeterminate <small>todo</small>
+            <tr>
+                <td style="text-align:right"> Checkbox
+                <td> <input type=checkbox>
+                <td> <input type=checkbox checked>
+                <td> <input type=checkbox disabled>
+                <td> <input type=checkbox checked disabled>
+                <td> <input type=checkbox id=indeterminate1>
+            <tr>
+                <td style="text-align:right"> Radio
+                <td> <input type=radio name=radio>
+                <td> <input type=radio name=radio checked>
+                <td> <input type=radio name=radiox disabled>
+                <td> <input type=radio name=radiox checked disabled>
+                <td> <input type=radio id=indeterminate2>
+        </table>
+        <script>
+            console.log(indeterminate1)
+            indeterminate1.indeterminate = true;
+            indeterminate2.indeterminate = true;
+        </script>
+        <br>
+        <label>
+            <input type=checkbox> Has a label, hover it will show an indicator
+        </label>
+    </section>
 
 
-<section>
-    <h1>Color-Input</h1>
-    <label>
-        Select your color: <input type=color>
-    </label>
+    <section>
+        <h1>Color-Input</h1>
+        <label>
+            Select your color: <input type=color>
+        </label>
 
-</section>
+    </section>
 
-<section>
-    <h1>Range-Input</h1>
-    <label>
-        Range with label<br>
-        <input type=range>
-    </label>
-</section>
+    <section>
+        <h1>Range-Input</h1>
+        <label>
+            Range with label<br>
+            <input type=range>
+        </label>
+    </section>
 
-<section>
-    <h1>Scrollbars</h1>
-    <div style="align-items:center; display:flex; flex-wrap:wrap; gap:1rem">
-        <div style="overflow:auto; width:200px; height:200px; display:inline-block;">
-            <div style="width:300px; height:300px; display:flex; place-items:center;">
-                Here a Div<br>
-                inside overflow:auto
+    <section>
+        <h1>Scrollbars</h1>
+        <div style="align-items:center; display:flex; flex-wrap:wrap; gap:1rem">
+            <div style="overflow:auto; width:200px; height:200px; display:inline-block;">
+                <div style="width:300px; height:300px; display:flex; place-items:center;">
+                    Here a Div<br>
+                    inside overflow:auto
+                </div>
             </div>
+            <textarea style="width:200px">Here a textarea that has scrollbars. Here a textarea that has scrollbars. Here a textarea that has scrollbars. Here a textarea that has scrollbars.</textarea>
+            <select size=2>
+                <option>Select
+                <option>Multiple
+                <option>Options
+            </select>
         </div>
-        <textarea style="width:200px">Here a textarea that has scrollbars. Here a textarea that has scrollbars. Here a textarea that has scrollbars. Here a textarea that has scrollbars.</textarea>
-        <select size=2>
-            <option>Select
-            <option>Multiple
-            <option>Options
-        </select>
-    </div>
-</section>
+    </section>
 
 
-<section>
-    <h1>:autofill</h1>
-    <form>
-        <label>Text Input <input id=x type=text> </label><br>
-        <label>Password <input id=y type=password></label><br>
-    </form>
-    <form>
-        <label> Name: <input name=name> </label><br>
-        <label> Firstname: <input name=firstname> </label><br>
-        <label> Company: <input name=company> </label><br>
-        <label> E-Mail: <input type=email name=email> </label><br>
-    </form>
-</section>
+    <section>
+        <h1>:autofill</h1>
+        <form>
+            <label>Text Input <input id=x type=text> </label><br>
+            <label>Password <input id=y type=password></label><br>
+        </form>
+        <form>
+            <label> Name: <input name=name> </label><br>
+            <label> Firstname: <input name=firstname> </label><br>
+            <label> Company: <input name=company> </label><br>
+            <label> E-Mail: <input type=email name=email> </label><br>
+        </form>
+    </section>
 
-<section>
-    <h1>::selection</h1>
-    <h1 id=selectionTest>Some text</h1>
-    <script>
-        var r = new Range()
-        r.selectNodeContents(selectionTest);
-        getSelection().addRange(r);
-    </script>
-</section>
+    <section>
+        <h1>::selection</h1>
+        <h1 id=selectionTest>Some text</h1>
+        <script>
+            var r = new Range()
+            r.selectNodeContents(selectionTest);
+            getSelection().addRange(r);
+        </script>
+    </section>
 
-<section>
-    <h1>input type=number</h1>
-    <input type=number step=".5" min="-.5" max="4">
-</section>
+    <section>
+        <h1>input type=number</h1>
+        <input type=number step=".5" min="-.5" max="4">
+    </section>
 
 
-<section style="width:30rem">
-    <h1>details / summary</h1>
-
-    <details>
-        <summary>Security</summary>
-        <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
-        </div>
-    </details>
-    <details>
-        <summary>Pricing</summary>
-        <div>
-            <ul>
-                <li>Cash on hand: $500.00</li>
-                <li>Current invoice: $75.30</li>
-                <li>Due date: 5/6/19</li>
-            </ul>
-        </div>
-    </details>
-    <details>
-        <summary>Nested</summary>
+    <section style="width:30rem">
+        <h1>details / summary</h1>
 
         <details>
-            <summary>Sub-Detail 1</summary>
-            <p>
+            <summary>Security</summary>
+            <div>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
-            </p>
+            </div>
         </details>
         <details>
-            <summary>Sub-Detail 2</summary>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
-            </p>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
-            </p>
+            <summary>Pricing</summary>
+            <div>
+                <ul>
+                    <li>Cash on hand: $500.00</li>
+                    <li>Current invoice: $75.30</li>
+                    <li>Due date: 5/6/19</li>
+                </ul>
+            </div>
+        </details>
+        <details>
+            <summary>Nested</summary>
+
+            <details>
+                <summary>Sub-Detail 1</summary>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
+                </p>
+            </details>
+            <details>
+                <summary>Sub-Detail 2</summary>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
+                </p>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga perspiciatis quidem sunt animi. Veniam accusamus illum, iste, hic aperiam ratione nemo, doloremque aliquid ipsum magnam dolorum cumque ducimus! Nobis, officia.
+                </p>
+            </details>
+
         </details>
 
-    </details>
+    </section>
+</div>
 
-</section>
+<div id=shadowed></div>
+<script>
+
+shadowDeepCss = function(shadow){
+    for (let ss of document.styleSheets) shadow.append(ss.ownerNode.cloneNode());
+}
+
+let shadow = shadowed.attachShadow({mode: 'open'});
+shadowDeepCss(shadow);
+shadow.innerHTML += '<br><br><hr><h1>Same inside shadow-dom (Experiment)</h1>'+document.body.innerHTML;
+
+</script>

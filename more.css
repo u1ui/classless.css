@@ -198,11 +198,7 @@ html {
 	background-color: var(--scrollbar-color-thumb);
 }
 
-/* select */
-
-select, textarea {
-	--scrollbar-thin: ;
-}
+select, textarea { --scrollbar-thin: ; }
 
 /***************************/
 /* range inputs            */
