@@ -15,7 +15,7 @@ body {
 }
 a {
     color: var(--color);
-    xtransition: color .2s; /* ff flickers on visited-color-change https://bugzilla.mozilla.org/show_bug.cgi?id=868975 */
+    /* transition: color .2s; ff flickers on visited-color-change https://bugzilla.mozilla.org/show_bug.cgi?id=868975 */
 }
 a:visited {
     color: var(--color-text);
@@ -116,19 +116,16 @@ mark {
 
 /* all inputs, buttons */
 input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
-    xbox-sizing: border-box;
     padding: .2em .4em;
     /* font-size: .9rem; */
     font-family: var(--font);
     max-width: 100%;
-    /* todo: neu ok?*/
+    /* todo: new ok? */
     /* xborder: 1px solid; */
     border-radius: var(--radius); /* remove? */
     /* min-height:1.3em; todo? for select, input same height in chrome, firefox has same height if they have borders? or line-height: 1.2;? line-height can not be set on select */
-
     border-width:var(--line-width);
     border-color:var(--color-line);
-
 }
 
 
@@ -142,8 +139,7 @@ input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-b
 }
 
 /* buttons */
-button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
-    /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
+button, ::file-selector-button, ::-webkit-file-upload-button, .btn { /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
     background-color: var(--color);
     color: var(--color-bg);
     border-color: transparent;
@@ -151,15 +147,12 @@ button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
     padding-right: 1em;
     transition: background-color .1s;
 }
-/* buttons hover */
 button:hover:not([disabled]), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn {
     background-color: var(--color-dark);
 }
-/* buttons disabled, todo all elements having disabled-attribute */
 button[disabled] {
     opacity: .5;
 }
-/* file-buttons */
 ::file-selector-button, ::-webkit-file-upload-button, select[size], /* chrome */ select[multiple] {
     border-top-right-radius: 0;/* recheck: border-end-end-radius supported? (-safari) */
     border-bottom-right-radius: 0;
@@ -168,28 +161,21 @@ button[disabled] {
 
 /* figure */
 figure {
-    xdisplay: flex;
-    xjustify-content: center;
-    xflex-direction: column;
     padding:0;
     margin: var(--gap);
     /* font-size: 1.2rem; */
     box-shadow: var(--shadow);
     border-radius: var(--radius);
     overflow:auto;
-    xmargin:auto;
 }
-
-figure>img {
+figure > img {
     border-radius: var(--radius);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-
 figure table {
     white-space: nowrap;
 }
-
 figcaption {
     opacity: .7;
     font-size: .9rem;
