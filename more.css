@@ -327,21 +327,21 @@ summary { list-style-type: none; }
 summary::-webkit-details-marker { display: none; }
 summary::after {
 	line-height:.9;
-	content:'⏵';
+	content:'▾'; /* not working in all browsers: ⏵❯ unknown support: ⟩⟩ */
+	transform: rotate(-90deg);
 	width: 1rem;
 	height: 1rem;
 	float: right;
-	transform: rotate(-0deg);
 	transition: transform .2s;
 	/* customize
 	font-family:--u1-ico-font;
-	background-image: var(--u1-icon-chevron);
+	background-image: var(--ico-chevron);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 1rem auto;
 	*/
 }
 details[open] > summary::after {
-	transform: rotate(90deg);
+	transform: rotate(0deg);
 }
 /**/

@@ -23,6 +23,7 @@ a:visited {
 a:hover, a:focus {
     color: var(--color-text);
 }
+/* chars not widly supported
 a[download], a[target] {
     text-decoration: none;
 }
@@ -31,9 +32,10 @@ a[target]::after {
     margin-left: .2em;
 }
 a[download]::after {
-    content: ' 🠇'; /* 🠇⤵↓ */
+    content: ' 🠇'; /* 🠇⤵↓ *
     margin-left: .2em;
 }
+*/
 hr {
     color: var(--color-light);
     margin: calc(var(--gap) * 2) 0;
