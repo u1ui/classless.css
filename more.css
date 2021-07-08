@@ -259,19 +259,14 @@ select, textarea { --scrollbar-thin: ; }
 	box-shadow: 0 0 0 .5em #0001
 }
 
-/* autofill */
-
+/* autofill (chrome) */
 :-webkit-autofill {
 	/* also works for firefox! */
 	filter: none;
 	box-shadow: 0 0 0 100px var(--color-light) inset;
 }
 
-/* autofill chrome */
-
 ::selection {
-	xbackground: var(--color);
-	xcolor: #fff;
 	background: hsl(var(--hsl), 0.3);
 }
 
