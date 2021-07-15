@@ -37,11 +37,9 @@ a[download]::after {
 }
 */
 hr {
-    color: var(--color-light);
+    color: var(--color-line);
     margin: calc(var(--gap) * 2) 0;
-
     border-width:var(--line-width);
-    border-color:var(--color-line);
 }
 
 
