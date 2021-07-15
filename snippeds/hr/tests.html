@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level.css TEST</title>
+  <meta name="viewport" content="width=device-width">
+
+
+  <!--script src="./test.js" type=module></script-->
+
+  <script src="https://cdn.jsdelivr.net/gh/u1ui/js/init.js" type=module crossorigin></script>
+  <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/base.css/full.css" crossorigin>
+
+  <link rel="stylesheet" href="../../variables.css">
+  <link rel="stylesheet" href="../../classless.css">
+  <link rel="stylesheet" href="../../aria.css" disabled>
+  <link rel="stylesheet" href="../../more.css">
+  <link rel="stylesheet" href="../../simple.css">
+
+<body>
+
+<div class=links>
+    <link rel="stylesheet" href="none">
+    <link rel="stylesheet" href="./section_sign.css">
+    <link rel="stylesheet" href="./gradient.css">
+</div>
+
+<h1>HR Snippeds Demo</h1>
+<fieldset id=selectEl>
+    <legend>Choose Stylesheet</legend>
+</fieldset>
+
+<script>
+let links = document.querySelectorAll('.links > link')
+links.forEach(link=>{
+    var label = document.createElement('label');
+    label.innerHTML += '<input type=radio name=x> ' + link.getAttribute('href') + '<br>';
+    label._link = link;
+    selectEl.append(label)
+});
+selectEl.addEventListener('change', e=>{
+    links.forEach(link=>link.rel='x');
+    console.log(e.target)
+    e.target.closest('label')._link.rel = 'stylesheet';
+})
+</script>
+
+<style contenteditable style="display:block;">hr { color:var(--color-line) }</style>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur voluptas tempore qui hic ab dignissimos pariatur voluptatem dolorem rem et minus natus, libero animi! Sunt atque corporis illo architecto sit!</p>
+<hr>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique obcaecati quis vitae sunt impedit, minus asperiores ipsum sapiente repellendus id nam earum atque repellat aperiam, laudantium saepe eius? Laudantium, tempore?

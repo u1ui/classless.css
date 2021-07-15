@@ -1,0 +1,16 @@
+hr {
+    border: none;
+    border-bottom: 3px double;
+    /* overflow: visible; */
+    text-align: center;
+    position:relative;
+}
+
+hr:after {
+    background:var(--color-bg);
+    content: '§';
+    padding: 0 .5em;
+    position: absolute;
+    bottom:-0.5em;
+    line-height:1;
+}

@@ -1,0 +1,3 @@
+hr {
+    border-image: linear-gradient(to left,#0000, currentColor, #0000) 100% 0 100% 0/3px 0 3px 0 stretch;
+}
