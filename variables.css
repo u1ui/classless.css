@@ -26,8 +26,7 @@ html {
 
   /* named */
   --color-area: var(--color-light);
-  --color-line: var(--color-dark);
-  --color-line: hsl(var(--hs), 10%, .15);
+  --color-line: hsl(var(--hs), 10%, .4);
 
   --color-red :     hsl(0deg,   var(--hsl-s), var(--hsl-l));
   --color-orange :  hsl(30deg,  var(--hsl-s), var(--hsl-l));
