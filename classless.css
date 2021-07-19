@@ -61,7 +61,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 
 table {
     width: 100%;
-    font-size: max(.65em, 16px);
+    font-size: max(.65em, 14px);
 }
 td, th {
     padding: .5em;
