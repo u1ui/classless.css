@@ -37,31 +37,6 @@ label[aria-label]:focus-within::before {
 }
 
 
-/* tabs-controls */
-/*[role="tablist"] {} /* no style, there can be also other contents inside */
-[role="tab"] {
-  background-color:transparent;
-  color:inherit;
-  border-bottom:solid transparent;
-  border-width:0 0 .2rem 0;
-  border-radius:0;
-  white-space:nowrap;
-  cursor:pointer;
-  padding:calc(var(--gap) / 4) calc(var(--gap) / 2);
-  margin:0;
-}
-[aria-selected="true"] {
-  border-bottom-color:var(--color);
-}
-[role="tab"]:hover ,
-[role="tab"]:focus {
-    background-color:#0000000a;
-}
-[role="tabpanel"] {
-  padding: var(--gap, 1rem);
-  xoverflow: auto;
-}
-
 /* more */
 [aria-controls] {
   cursor: pointer;
