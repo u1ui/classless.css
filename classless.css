@@ -63,13 +63,19 @@ table {
     width: 100%;
     font-size: max(.65em, 14px);
 }
+tr {
+    border-style:solid; /* new: not on td/th any problems? */
+    border-width:0 0 var(--line-width) 0;
+    border-color:var(--color-line);
+}
 td, th {
     padding: .5em;
     padding: calc(var(--gap) / 2);
+    /*
     border-style:solid;
     border-width:0 0 var(--line-width) 0;
     border-color:var(--color-line);
-
+    */
 }
 
 /* focus style */
