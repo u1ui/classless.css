@@ -5,7 +5,8 @@ html {
     background-color: var(--color-bg);
     color: var(--color-text);
     accent-color: var(--color); /* currently chromium canary */
-    font-family: var(--font);
+    /* font-family: var(--font); old zzz */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     font-size: calc(13px + .7vmin);
     -webkit-hyphens: auto;
     hyphens: auto;
@@ -124,7 +125,8 @@ mark {
 input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
     padding: .2em .4em;
     /* font-size: .9rem; */
-    font-family: var(--font);
+    /* font-family: var(--font); zzz, was there a advantage over inherit? */
+    font-family:inherit;
     max-width: 100%;
     /* todo: new ok? */
     /* xborder: 1px solid; */
@@ -153,7 +155,7 @@ button, ::file-selector-button, ::-webkit-file-upload-button, .btn { /* The sele
     padding-right: 1em;
     transition: background-color .1s;
 }
-button:hover:not([disabled]), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn {
+button:hover:not([disabled]), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn:hover {
     background-color: var(--color-dark);
 }
 button[disabled] {
