@@ -154,6 +154,10 @@ button, ::file-selector-button, ::-webkit-file-upload-button, .btn { /* The sele
     padding-left: 1em;
     padding-right: 1em;
     transition: background-color .1s;
+
+    /* for .btn */
+	text-decoration:none;
+	display:inline-block;
 }
 button:hover:not([disabled]), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn:hover {
     background-color: var(--color-dark);
