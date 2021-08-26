@@ -43,7 +43,7 @@ html {
   --color-gray-dark:  hsl(var(--hsl-h), 4%, 40%);
 
   /* misc */
-  --font:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  /* --font:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; */
   --width:35rem; /* rename? --main-width, --content-width */
   --line-width: 1px;
 
