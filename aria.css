@@ -1,7 +1,7 @@
 
 /* [aria-label] as tooltip */
-[aria-label]::before {
-  content:attr(aria-label);
+[title]::before {
+  content:attr(title);
   position:absolute;
   transform:translate(-1rem, -130%);
   display:none;
@@ -29,10 +29,10 @@
   /**/
 }
 
-[aria-label]:focus::before, [aria-label]:hover::before {
+[title]:focus::before, [title]:hover::before {
   display:block;
 }
-label[aria-label]:focus-within::before {
+label[title]:focus-within::before {
   display:block;
 }
 
