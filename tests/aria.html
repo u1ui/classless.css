@@ -97,38 +97,39 @@
 
 </section>
 
-
-
 <section>
-  <h1>Tabs</h1>
-  <p>[aria-tablist], [role=tab], [role=tabpanel]</p>
+  <h1>Hover Tabs</h1>
+  <p>Move the mouse over a button inside the tabbed menu:</p>
   <div class=tabs>
-    <div role=tablist aria-label="Sample Tabs">
-      <button role=tab aria-selected=true  aria-controls="panel-1" id="tab-1" js-will-do-tabindex="0">First Tab</button>
-      <button role=tab aria-selected=false aria-controls="panel-2" id="tab-2" js-will-do-tabindex="-1">Second Tab</button>
-      <button role=tab aria-selected=false aria-controls="panel-3" id="tab-3" js-will-do-tabindex="-1">Third Tab</button>
+    <div role=tablist aria-label="Sample Tabs" class = "tab">
+      <button class="tablinks" onmouseover="openCity(event, 'First_Tab_hover')">First Tab</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Second_Tab_hover')">Second Tab</button>
+      <button class="tablinks" onmouseover="openCity(event, 'Third_Tab_hover')">Third Tab</button>
     </div>
-    <div id="panel-1" role=tabpanel tabindex="0" js-will-do-aria-labelledby="tab-1">
-      <p>Content for the first panel</p>
+    <div id="First_Tab_hover" class="tabcontent">
+      <h3>Hello</h3>
+      <p>Continue work with me</p>
     </div>
-    <div id="panel-2" role=tabpanel tabindex="0" js-will-do-aria-labelledby="tab-2" js-will-do-hidden>
-      <p>Content for the second panel</p>
+    
+    <div id="Second_Tab_hover" class="tabcontent">
+      <h3>Hello</h3>
+      <p>Hope to work with you.</p> 
     </div>
-    <div id="panel-3" role=tabpanel tabindex="0" js-will-do-aria-labelledby="tab-3" js-will-do-hidden>
-      <p>Content for the third panel</p>
+    
+    <div id="Third_Tab_hover" class="tabcontent">
+      <h3>Hello</h3>
+      <p>Contact with me from now.</p>
     </div>
   </div>
 
-  <h3>tablist-overflows</h3>
+  <h3>General Tabs</h3>
+  <p>Click the button inside the tabbed menu:</p>
   <div class=tabs>
     <div role=tablist aria-label="Sample Tabs"  class="tab">
       <button class="tablinks active" onclick="openCity(event, 'First_Tab')">First Tab</button>
       <button class="tablinks" onclick="openCity(event, 'Second_Tab')">Second Tab</button>
       <button class="tablinks" onclick="openCity(event, 'Third_Tab')">Third Tab</button>
     </div>
-    <!-- <div id="panel-1" role=tabpanel tabindex="0" aria-labelledby="tab-1">
-      <p>Content for the first panel</p>
-    </div> -->
     <div id="First_Tab" class="tabcontent active">
       <h3>Hello</h3>
       <p>Continue work with me</p>
@@ -141,7 +142,7 @@
     
     <div id="Third_Tab" class="tabcontent">
       <h3>Hello</h3>
-      <p>Contact with me from now</p>
+      <p>Contact with me from now.</p>
     </div>
   </div>
 </section>
