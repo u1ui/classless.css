@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Level.css TEST</title>
-  <script src="./test.js" type=module></script>
+  <!-- <script src="./test.js" type=module></script> -->
 
-  <link rel="stylesheet" href="../../norm.css/oldies.css" disabled>
+  <!-- <link rel="stylesheet" href="../../norm.css/oldies.css" disabled>
   <link rel="stylesheet" href="../../norm.css/norm.css">
   <link rel="stylesheet" href="../../base.css/base.css">
   <link rel="stylesheet" href="../../base.css/nomotion.css" disabled>
-  <link rel="stylesheet" href="../../base.css/print.css" disabled>
+  <link rel="stylesheet" href="../../base.css/print.css" disabled> -->
 
   <link rel="stylesheet" href="../variables.css">
   <link rel="stylesheet" href="../classless.css">
@@ -26,6 +26,41 @@
     body > * {
       padding:1rem;
       background:var(--color-area);
+    }
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
     }
   </style>
 
@@ -86,16 +121,44 @@
 
   <h3>tablist-overflows</h3>
   <div class=tabs>
-    <div role=tablist aria-label="Sample Tabs">
-      <button role=tab aria-selected=true  aria-controls="panel-1"  id="tab-1" tabindex="0">First Tab</button>
-      <button role=tab aria-selected=false aria-controls="panel-2" id="tab-2" tabindex="-1">Second Tab</button>
-      <button role=tab aria-selected=false aria-controls="panel-3" id="tab-3" tabindex="-1">Third Tab</button>
-      <button role=tab aria-selected=false aria-controls="panel-4" id="tab-4" tabindex="-1">Third Tab</button>
-      <button role=tab aria-selected=false aria-controls="panel-5" id="tab-5" tabindex="-1">Third Tab</button>
-      <button role=tab aria-selected=false aria-controls="panel-6" id="tab-6" tabindex="-1">Third Tab</button>
+    <div role=tablist aria-label="Sample Tabs"  class="tab">
+      <button class="tablinks active" onclick="openCity(event, 'First_Tab')">First Tab</button>
+      <button class="tablinks" onclick="openCity(event, 'Second_Tab')">Second Tab</button>
+      <button class="tablinks" onclick="openCity(event, 'Third_Tab')">Third Tab</button>
     </div>
-    <div id="panel-1" role=tabpanel tabindex="0" aria-labelledby="tab-1">
+    <!-- <div id="panel-1" role=tabpanel tabindex="0" aria-labelledby="tab-1">
       <p>Content for the first panel</p>
+    </div> -->
+    <div id="First_Tab" class="tabcontent active">
+      <h3>Hello</h3>
+      <p>Continue work with me</p>
+    </div>
+    
+    <div id="Second_Tab" class="tabcontent">
+      <h3>Hello</h3>
+      <p>Hope to work with you.</p> 
+    </div>
+    
+    <div id="Third_Tab" class="tabcontent">
+      <h3>Hello</h3>
+      <p>Contact with me from now</p>
     </div>
   </div>
 </section>
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+</body>
+</html>
