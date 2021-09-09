@@ -153,7 +153,7 @@ button, ::file-selector-button, ::-webkit-file-upload-button, .btn { /* The sele
     border-color: transparent;
     padding-left: 1em;
     padding-right: 1em;
-    transition: background-color .1s;
+    transition: background-color .1s; /* better every property? does not get along with focus-animation */
 
     /* for .btn */
 	text-decoration:none;
