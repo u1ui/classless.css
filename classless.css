@@ -110,6 +110,7 @@ code {
     white-space: pre-wrap;
     box-decoration-break: clone;
     line-height: 1;
+    --line-height: 1;
 }
 
 mark {
@@ -170,6 +171,12 @@ button[disabled] {
     border-bottom-right-radius: 0;
     margin: 0 .5em 0 0;
 }
+
+:focus::placeholder {
+    opacity: .2; /* default: .54 */
+}
+
+
 
 /* figure */
 figure {

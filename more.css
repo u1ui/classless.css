@@ -301,6 +301,7 @@ details { border-bottom: 1px solid var(--color-line); }
 summary {
 	padding:calc(var(--gap) / 2) 0;
 	line-height:1; /* to center floated ::after */
+	--line-height:1; /* to center floated ::after */
 }
 details[open] > summary { margin-bottom: calc(var(--gap) / 2 ); }
 details[open] { padding-bottom: calc(var(--gap) / 1); }
