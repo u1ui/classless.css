@@ -54,6 +54,7 @@ select:not([size], [multiple]) {
 [type=radio], [type=checkbox] {
 	-webkit-appearance: none;
 	appearance: none;
+	transform:rotate(.002deg); /* improve rendering in ff, chrome */
 }
 
 [type=radio], [type=checkbox] {
