@@ -106,7 +106,6 @@ select:not([size], [multiple]) {
 [type=radio]::before {
 	border-radius: inherit;
 	border: .15em solid #fff;
-	;
 }
 
 /* disabled */
