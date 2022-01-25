@@ -31,11 +31,11 @@ html {
   --line-width: 1px;
   --gap:1rem;
   --radius: .3rem;
+
   --shadow-x:0;
   --shadow-y:.25rem;
-  --shadow:
-      var(--shadow-x) var(--shadow-y) .8rem -.25rem rgba(23, 23, 23, 0.35),
-      var(--shadow-x) var(--shadow-y) .5rem -.35rem rgba(23, 23, 23, 0.2);
+  --shadow-blur:.7rem;
+  --shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) #0003;
 }
 /*
 @media (prefers-color-scheme: dark) {

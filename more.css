@@ -109,8 +109,7 @@ select:not([size], [multiple]) {
 }
 
 /* disabled */
-
-[type=radio][disabled], [type=checkbox][disabled] {
+[type=radio]:disabled, [type=checkbox]:disabled {
 	opacity: .5;
 }
 
@@ -127,7 +126,7 @@ select:not([size], [multiple]) {
 	z-index can not be behinde checkbox, only behinde ::before
 */
 
-:is([type=radio], [type=checkbox]):not([disabled])::after {
+:is([type=radio], [type=checkbox]):not(:disabled)::after {
 	content: '';
 	position: absolute;
 	top: -60%;
