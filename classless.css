@@ -109,7 +109,7 @@ code {
     background-color: var(--color-light);
     white-space: pre-wrap;
     box-decoration-break: clone;
-    line-height: 1;
+    line-height: var(--line-height);
     --line-height: 1;
 }
 
@@ -200,4 +200,9 @@ figcaption {
     font-size: .9rem;
     font-style: italic;
     text-align: center;
+}
+
+dialog {
+    background-color:var(--color-bg);
+    color:var(--color-text);
 }
