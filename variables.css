@@ -27,7 +27,7 @@ html {
   --color-line: hsl(var(--hs), 10%, .4);
 
   /* misc */
-  --width:35rem; /* rename? --main-width, --content-width */
+  --width:42rem; /* rename? --main-width, --content-width */
   --line-width: 1px;
   --gap:1rem;
   --radius: .3rem;
