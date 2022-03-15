@@ -159,7 +159,7 @@ button, ::file-selector-button, ::-webkit-file-upload-button, .btn { /* The sele
 	text-decoration:none;
 	display:inline-block;
 }
-button:hover:not(:disabled), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn:hover {
+button:hover:not(:disabled), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn:hover, button:focus {
     background-color: var(--color-dark);
 }
 button:disabled {
