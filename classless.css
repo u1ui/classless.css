@@ -4,7 +4,7 @@
 html {
     background-color: var(--color-bg);
     color: var(--color-text);
-    accent-color: var(--color); /* chromium 93, ff 92, safari 15.4 */
+    accent-color: var(--color); /* ch 93, ff 92, sa 15.4 */
 }
 a {
     color: var(--color);
@@ -16,19 +16,6 @@ a:visited {
 a:hover, a:focus {
     color: var(--color-text);
 }
-/* chars not widly supported
-a[download], a[target] {
-    text-decoration: none;
-}
-a[target]::after {
-    content: '🠆';
-    margin-left: .2em;
-}
-a[download]::after {
-    content: ' 🠇'; /* 🠇⤵↓ *
-    margin-left: .2em;
-}
-*/
 hr {
     color: var(--color-line);
     margin: calc(var(--gap) * 2) 0;
@@ -36,21 +23,16 @@ hr {
 }
 
 
-/* future: *
-:where(h1,h2,h3,h4,h5,h6,p,ul,ol):first-child {
-  margin-top:0;
-}
-:where(h1,h2,h3,h4,h5,h6,p,ul,ol):last-child {
-  margin-bottom:0;
-}
-/* */
+/* after safari 13.1:
+:where(h1,h2,h3,h4,h5,h6,p,ul,ol):first-child { margin-top:0; }
+:where(h1,h2,h3,h4,h5,h6,p,ul,ol):last-child { margin-bottom:0; }
+*/
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, ul:first-child, ol:first-child {
     margin-top:0;
 }
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, p:last-child, ul:last-child, ol:last-child {
     margin-bottom:0;
 }
-/* */
 
 table {
     width: 100%;
@@ -64,11 +46,6 @@ tr {
 td, th {
     padding: .5em;
     padding: calc(var(--gap) / 2);
-    /*
-    border-style:solid;
-    border-width:0 0 var(--line-width) 0;
-    border-color:var(--color-line);
-    */
 }
 
 /* focus style */
@@ -100,6 +77,7 @@ code {
     padding: 0 0.5em;
     background-color: var(--color-light);
     white-space: pre-wrap;
+    -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     line-height: var(--line-height);
     --line-height: 1;

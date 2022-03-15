@@ -1,0 +1,12 @@
+
+a[download], a[target] {
+    text-decoration: none;
+}
+a[target]::after {
+    content: '🠆';
+    margin-left: .2em;
+}
+a[download]::after {
+    content: ' 🠇'; /* 🠇⤵↓ */
+    margin-left: .2em;
+}
