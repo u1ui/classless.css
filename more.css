@@ -11,12 +11,10 @@ https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-contr
 /* li::marker { content: "• "; } /* ::marker is bad, its shown even if list-style:none*/
 
 ul {
-	list-style-type: '•  ';
-	/* ·•●⏺‣▶⏵✔⊚○◌🞅🞇🞉🖝 */
+	list-style-type: '•  '; 	/* ·•●⏺‣▶⏵✔⊚○◌🞅🞇🞉🖝 */
 	padding-inline-start: 1em;
 }
-
-ul>li::marker {
+ul > li::marker {
 	font-size: 1em;
 }
 
@@ -188,11 +186,9 @@ html {
 	width: var(--scrollbar-thin) 8px;
 	height: var(--scrollbar-thin) 8px;
 }
-
 ::-webkit-scrollbar-track {
 	background: var(--scrollbar-color-track);
 }
-
 ::-webkit-scrollbar-thumb {
 	background-color: var(--scrollbar-color-thumb);
 }
