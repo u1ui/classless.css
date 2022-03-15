@@ -4,8 +4,7 @@
 html {
     background-color: var(--color-bg);
     color: var(--color-text);
-    accent-color: var(--color); /* currently chromium canary */
-    /* font-family: var(--font); old zzz */
+    accent-color: var(--color); /* chromium 93, ff 92, safari 15.4 */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     font-size: calc(13px + .7vmin);
     -webkit-hyphens: auto;
