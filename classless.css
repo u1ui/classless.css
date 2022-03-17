@@ -45,7 +45,6 @@ tr {
 }
 td, th {
     padding: .5em;
-    padding: calc(var(--gap) / 2);
 }
 
 /* focus style */
