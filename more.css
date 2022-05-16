@@ -56,8 +56,12 @@ select:not([size], [multiple]) {
 }
 
 [type=radio], [type=checkbox] {
+	/*
 	width: .9em;
 	height: .9em;
+	*/
+	width: 1.1em;
+	height: 1.1em;
 	background-color: #fff;
 	border: solid 1px;
 	position: relative;
