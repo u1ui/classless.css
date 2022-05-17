@@ -60,8 +60,8 @@ select:not([size], [multiple]) {
 	width: .9em;
 	height: .9em;
 	*/
-	width: 1.1em;
-	height: 1.1em;
+	width: 1em;
+	height: 1em;
 	background-color: #fff;
 	border: solid 1px;
 	position: relative;
@@ -298,16 +298,16 @@ input[type=number] {
 
 details { border-bottom: 1px solid var(--color-line); }
 summary {
-	padding:calc(var(--gap) / 2) 0;
+	padding:.5rem 0;
 	line-height:1; /* to center floated ::after */
 	--line-height:1; /* to center floated ::after */
 }
-details[open] > summary { margin-bottom: calc(var(--gap) / 2 ); }
-details[open] { padding-bottom: calc(var(--gap) / 1); }
+details[open] > summary { margin-bottom: .5rem; }
+details[open] { padding-bottom: 1rem; }
 
 /* nested *
 details details {
-	margin-inline:calc(var(--gap)/2);
+	margin-inline:.5rem;
 }
 /* */
 
