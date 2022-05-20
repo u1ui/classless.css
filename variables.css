@@ -28,7 +28,7 @@ html {
   /* misc */
   --width:42rem; /* rename? --main-width, --content-width */
   --line-width: 1px;
-  --gap:1rem;
+  /* --gap:1rem; deprecated? */
   --radius: .3rem;
 
   --shadow-x:0;
@@ -40,7 +40,7 @@ html {
 
 
 
-/*
+/* *
 @media (prefers-color-scheme: dark) {
   html {
     --color-light:   hsl(var(--hs), calc(var(--hsl-l) * .7 ) );
@@ -53,7 +53,7 @@ html {
     --color-text:  hsl(var(--hs), 99.5%);
   }
 }
-*/
+/* */
 
 
 /*
