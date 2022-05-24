@@ -36,6 +36,12 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 
 table {
     width: 100%;
+    /* so that margins also work: test! *
+    width:-moz-available;
+    width:-webkit-fill-available;
+    width:stretch;
+    */
+
     font-size: max(.7em, 14px);
 }
 tr {
@@ -144,7 +150,10 @@ button:disabled {
     opacity: .2;
 }
 
+table {
+    word-break: normal;
 
+}
 
 /* figure */
 figure {
@@ -166,9 +175,11 @@ figure > img {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+/*
 figure table {
     white-space: nowrap;
 }
+*/
 figcaption {
     opacity: .7;
     font-size: .9rem;
