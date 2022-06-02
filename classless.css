@@ -41,8 +41,7 @@ table {
     width:-webkit-fill-available;
     width:stretch;
     */
-
-    font-size: max(.7em, 14px);
+    font-size: max(.8em, 14px);
 }
 tr {
     border-style:solid; /* new: not on td/th any problems? */
@@ -56,7 +55,6 @@ td, th {
 /* focus style */
 :focus {
     outline: .4rem solid hsl(var(--hsl), .2);
-    /* xoutline-offset:0; needed? */
     transition: .15s;
 }
 :focus:not(:focus-visible) { outline-width: 0; }
@@ -89,9 +87,6 @@ code {
 
 mark {
     background-color: hsl(var(--hsl-h), 100%, 70%, 0.5);
-    /*
-    padding: 0 0.15em;  no padding as it can be some part of a word,
-    maybe this? box-shadow: 0em 0em 0px 0.1em hsl(var(--hsl-h), 100%, 70%, 0.5) */
 }
 
 /* FORM */
@@ -99,8 +94,6 @@ mark {
 /* all inputs, buttons */
 input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
     padding: .2em .4em;
-    /* font-size: .9rem; */
-    /* font-family: var(--font); zzz, was there a advantage over inherit? */
     font-family:inherit;
     max-width: 100%;
     /* todo: new ok? */
@@ -152,19 +145,22 @@ button:disabled {
 
 table {
     word-break: normal;
+}
 
+dialog {
+    background-color:var(--color-bg);
+    color:var(--color-text);
 }
 
 /* figure */
 figure {
     padding:0;
     margin: 1rem auto;
-    /* font-size: 1.2rem; */
     box-shadow: var(--shadow);
     border-radius: var(--radius);
     overflow:auto;
-
     /*
+    font-size: 1.2rem;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -175,19 +171,9 @@ figure > img {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-/*
-figure table {
-    white-space: nowrap;
-}
-*/
 figcaption {
     opacity: .7;
     font-size: .9rem;
     font-style: italic;
     text-align: center;
-}
-
-dialog {
-    background-color:var(--color-bg);
-    color:var(--color-text);
 }
