@@ -1,5 +1,5 @@
 hr {
-    border: none;
+    border: 0;
     border-bottom: 3px double;
     /* overflow: visible; */
     text-align: center;
