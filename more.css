@@ -159,11 +159,11 @@ select:not([size], [multiple]) {
 }
 
 [type=color]::-moz-color-swatch {
-	border: none;
+	border: 0;
 }
 
 [type=color]::-webkit-color-swatch {
-	border: none;
+	border: 0;
 }
 
 [type=color]::-webkit-color-swatch-wrapper {
@@ -205,7 +205,7 @@ select, textarea { --scrollbar-thin: ; }
 
 [type=range] {
 	background-color: transparent;
-	border: none;
+	border: 0;
 	-webkit-appearance: none;
 	padding: 0;
 }
