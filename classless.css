@@ -110,7 +110,7 @@ input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-b
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
-    border: none;
+    border: 0;
     background-color: var(--color-light);
 }
 
