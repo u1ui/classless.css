@@ -43,7 +43,7 @@ table {
     */
     font-size: max(.8em, 14px);
 }
-tr {
+tr:not(:last-child) {
     border-style:solid; /* new: not on td/th any problems? */
     border-width:0 0 var(--line-width) 0;
     border-color:var(--color-line);
