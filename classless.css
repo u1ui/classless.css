@@ -52,12 +52,14 @@ td, th {
     padding: .5em;
 }
 
-/* focus style */
+/* focus/active style */
 :focus {
     outline: .4rem solid hsl(var(--hsl), .2);
     transition: .15s;
 }
 :focus:not(:focus-visible) { outline-width: 0; }
+:active:active { outline-width: .6rem; }
+
 
 blockquote {
     margin: 0;
@@ -73,7 +75,6 @@ pre {
     overflow-x: auto;
     border-radius: var(--radius);
 }
-
 code {
     font-size: .9em;
     padding: 0 .3em;
