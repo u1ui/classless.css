@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width">
+    <script src=../../u1/tests/test-init.js type=module></script>
+
+    <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/norm.css/norm.css">
+    <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/base.css/base.css">
+    <link rel=stylesheet href="../variables.css">
+    <link rel=stylesheet href="../classless.css">
+
+    <style>
+        body {
+            padding:2rem;
+        }
+    </style>
+
+
+<body>
+
+    <section>
+        <h2>Global (html)</h2>
+        <ul>
+            <li>The color of native elements are in the theme-color
+            <li>background-color
+            <li>Text-color
+        </ul>
+
+        <label>
+            Checkbox
+            <input type=checkbox checked>
+        </label>
+
+        <label>
+            Range
+            <input type=range>
+        </label>
+
+
+        <h2>Links (a)</h2>
+        <a href="file://asfasf.asfasef.asfsef/asef.ch">Link color is the theme-color, also test hover and focus</a><br>
+        <a href="https://www.google.com/">Visited links</a>
+
+        <h2>Line (HR)</h2>
+
+        <hr>
+
+        <h2>Flow content</h2>
+        <p>Headings, Paragraphs, list.. have not margin-top if they are first and not margin-bottom if they are last</p>
+
+        <div style="border:1px solid">
+            <h1>This is a H1</h1>
+            <h6>This is a H6</h6>
+        </div>
+        <div style="border:1px solid">
+            <ul><li>This is a list</ul>
+            <p>This is a paragraph</p>
+        </div>
+
+        <h2>Tables</h2>
+        <ul>
+            <li>Stretched to available width
+            <li>Smaller font (.8rem)
+            <li>Rows have a border between
+            <li>cells have a padding of .5em
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1
+                    <th>Header 2
+            <tbody>
+                <tr>
+                    <td>Cell 1
+                    <td>Cell 2
+                <tr>
+                    <td>Cell 1
+                    <td>Cell 2
+                <tr>
+                    <td>Cell 1
+                    <td>Cell 2
+
+        </table>
+
+        <h2>Focus</h2>
+
+        <ul>
+            <li>Every focued element has a outline, if focused by keyboard
+            <li>If the element is active, the outline gets bigger
+        </ul>
+
+        <label>
+            Test focus
+            <input>
+        </label>
+
+
+        <h2>Blockquote</h2>
+
+        <pre><code>
+        blockquote {
+            margin: 0;
+            padding: .5rem;
+            padding-left: 1rem;
+            border-left: .3rem solid var(--color);
+            background-color: var(--color-light);
+        }
+        </code></pre>
+
+        <blockquote>
+            <p>This is a blockquote</p>
+        </blockquote>
+
+        <h2>Pre</h2>
+
+        <pre><code>
+        pre {
+            background-color: var(--color-light);
+            padding: 1rem;
+            overflow-x: auto;
+            border-radius: var(--radius);
+        }
+        </code></pre>
+
+        <pre>
+        This is a pre</pre>
+
+
+        <h2>Code</h2>
+        <p> to be continued..., generate this testpage from the css file?</p>
+    </section>
+
+
+
+
+
+    code {
+        font-size: .9em;
+        padding: 0 .3em;
+        background-color: var(--color-light);
+        white-space: pre-wrap;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        line-height: var(--line-height);
+        --line-height: 1;
+    }
+
+    mark {
+        background-color: hsl(var(--hsl-h), 100%, 70%, 0.5);
+    }
+
+    /* FORM */
+
+    /* all inputs, buttons */
+    input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
+        padding: .2em .4em;
+        font-family:inherit;
+        max-width: 100%;
+        /* todo: new ok? */
+        /* xborder: 1px solid; */
+        border-radius: var(--radius); /* remove? */
+        /* min-height:1.3em; todo? for select, input same height in chrome, firefox has same height if they have borders? or line-height: 1.2;? line-height can not be set on select */
+        border-width:var(--line-width);
+        border-color:var(--color-line);
+    }
+
+
+    /* file-input */
+    [type=file] {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        border: 0;
+        background-color: var(--color-light);
+    }
+
+    /* buttons */
+    button, ::file-selector-button, ::-webkit-file-upload-button, .btn { /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
+        background-color: var(--color);
+        color: var(--color-bg);
+        border-color: transparent;
+        padding-left: 1em;
+        padding-right: 1em;
+        transition: background-color .1s; /* better every property? does not get along with focus-animation */
+
+        /* for .btn */
+        text-decoration:none;
+        display:inline-block;
+    }
+    button:hover:not(:disabled), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn:hover, button:focus {
+        background-color: var(--color-dark);
+    }
+    button:disabled {
+        opacity: .5;
+    }
+    ::file-selector-button, ::-webkit-file-upload-button, select[size], /* chrome */ select[multiple] {
+        border-top-right-radius: 0;/* recheck: border-end-end-radius supported? (-safari) */
+        border-bottom-right-radius: 0;
+        margin: 0 .5em 0 0;
+    }
+
+    :focus::placeholder {
+        opacity: .2;
+    }
+
+    table {
+        word-break: normal;
+    }
+
+    dialog {
+        background-color:var(--color-bg);
+        color:var(--color-text);
+    }
+
+    /* figure */
+    figure {
+        padding:0;
+        margin: 1rem auto;
+        box-shadow: var(--shadow);
+        border-radius: var(--radius);
+        overflow:auto;
+        /*
+        font-size: 1.2rem;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        */
+    }
+    figure > img {
+        border-radius: var(--radius);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    figcaption {
+        opacity: .7;
+        font-size: .9rem;
+        font-style: italic;
+        text-align: center;
+    }
+
+
+
+</html>
