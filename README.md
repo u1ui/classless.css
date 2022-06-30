@@ -3,10 +3,11 @@ null
 
 ## Demos
 
-[aria.html](https://raw.githack.com/u1ui/classless.css/main/tests/aria.html)  
-[list-bullet.html](https://raw.githack.com/u1ui/classless.css/main/tests/list-bullet.html)  
-[more.html](https://raw.githack.com/u1ui/classless.css/main/tests/more.html)  
-[variables.html](https://raw.githack.com/u1ui/classless.css/main/tests/variables.html)  
+[aria.html](http://gcdn.li/u1ui/classless.css@main/tests/aria.html)  
+[list-bullet.html](http://gcdn.li/u1ui/classless.css@main/tests/list-bullet.html)  
+[more.html](http://gcdn.li/u1ui/classless.css@main/tests/more.html)  
+[test.html](http://gcdn.li/u1ui/classless.css@main/tests/test.html)  
+[variables.html](http://gcdn.li/u1ui/classless.css@main/tests/variables.html)  
 
 ## Resources
 
