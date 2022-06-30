@@ -35,6 +35,7 @@ html {
   --shadow-y:.25rem;
   --shadow-blur:.7rem;
   --shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) #0003;
+
 }
 
 
@@ -43,6 +44,7 @@ html {
 /* *
 @media (prefers-color-scheme: dark) {
   html {
+
     --color-light:   hsl(var(--hs), calc(var(--hsl-l) * .7 ) );
     --color-dark:    hsl(var(--hs), calc(var(--hsl-l) + (100% - var(--hsl-l)) * .9 ) );
 
