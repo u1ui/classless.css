@@ -40,10 +40,10 @@ section > :first-child {
     <section>
         <h1>List Item</h1>
         <ul>
-            <li>List item 1</li>
-            <li>List item 2</li>
-            <li>List item 3</li>
-            <li>List item 4</li>
+            <li>List item 1
+            <li>List item 2
+            <li>List item 3
+            <li>List item 4
         </ul>
     </section>
 
@@ -57,19 +57,19 @@ section > :first-child {
                 <td> Multiple-Attribute <br><small> (not affected)</small>
             <tr>
                 <td>
-                    <select>
+                    <select aria-label="test normal">
                         <option>Option 1
                         <option>Option 2
                         <option>Option 3
                     </select>
                 <td>
-                    <select size=2>
+                    <select size=2 aria-label="test size 2">
                         <option>Option 1
                         <option>Option 2
                         <option>Option 3
                     </select>
                 <td>
-                    <select multiple>
+                    <select multiple aria-label="test multiple">
                         <option>Option 1
                         <option>Option 2
                         <option>Option 3
@@ -138,12 +138,16 @@ section > :first-child {
                     inside overflow:auto
                 </div>
             </div>
-            <textarea style="width:200px">Here a textarea that has scrollbars. Here a textarea that has scrollbars. Here a textarea that has scrollbars. Here a textarea that has scrollbars.</textarea>
-            <select size=2>
-                <option>Select
-                <option>Multiple
-                <option>Options
-            </select>
+            <label>
+                <textarea style="width:200px">Here a textarea that has scrollbars. Here a textarea that has scrollbars. Here a textarea that has scrollbars. Here a textarea that has scrollbars.</textarea>
+            </label>
+            <label>
+                <select size=2>
+                    <option>See
+                    <option>Multiple
+                    <option>Options
+                </select>
+            </label>
         </div>
     </section>
 
@@ -174,7 +178,10 @@ section > :first-child {
 
     <section>
         <h1>input type=number</h1>
-        <input type=number step=".5" min="-.5" max="4">
+        <label>
+            Demo:
+            <input type=number step=".5" min="-.5" max="4">
+        </label>
     </section>
 
 
