@@ -94,7 +94,8 @@ mark {
 /* FORM */
 
 /* all inputs, buttons */
-input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-button, .btn {
+/* is:(input, textarea, select, button, .btn, ::file-selector-button, ::-webkit-file-upload-button) { forgiving :is-selector usable after safari 13.7 */
+input, textarea, select, button, .btn {
     padding: .2em .4em;
     font-family:inherit;
     max-width: 100%;
@@ -117,7 +118,8 @@ input, textarea, select, button, ::file-selector-button, ::-webkit-file-upload-b
 }
 
 /* buttons */
-button, ::file-selector-button, ::-webkit-file-upload-button, .btn { /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
+/* is:(button, .btn, ::file-selector-button, ::-webkit-file-upload-button) { forgiving :is-selector usable after safari 13.7 */
+button, .btn { /* The selector is not invalidated although ::-webkit-file-upload-button in ff is not working. */
     background-color: var(--color);
     color: var(--color-bg);
     border-color: transparent;
@@ -129,13 +131,15 @@ button, ::file-selector-button, ::-webkit-file-upload-button, .btn { /* The sele
 	text-decoration:none;
 	display:inline-block;
 }
-button:hover:not(:disabled), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn:hover, button:focus {
+/* button:hover:not(:disabled), :hover::file-selector-button, :hover::-webkit-file-upload-button, .btn:hover, button:focus { */
+button:hover:not(:disabled), .btn:hover, button:focus {
     background-color: var(--color-dark);
 }
 button:disabled {
     opacity: .5;
 }
-::file-selector-button, ::-webkit-file-upload-button, select[size], /* chrome */ select[multiple] {
+/* ::file-selector-button, ::-webkit-file-upload-button, select[size], / * chrome * / select[multiple] { */
+select[size], /* chrome */ select[multiple] {
     border-top-right-radius: 0;/* recheck: border-end-end-radius supported? (-safari) */
     border-bottom-right-radius: 0;
     margin: 0 .5em 0 0;
