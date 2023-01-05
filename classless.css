@@ -10,9 +10,9 @@ a {
     color: var(--color);
     /* transition: color .2s; ff flickers on visited-color-change https://bugzilla.mozilla.org/show_bug.cgi?id=868975 */
 }
-a:visited {
+/* a:visited {
     color: var(--color-text);
-}
+} */
 a:hover, a:focus {
     color: var(--color-text);
 }
