@@ -128,7 +128,7 @@ select:not([size], [multiple]) {
 	z-index can not be behinde checkbox, only behinde ::before
 */
 
-:is([type=radio], [type=checkbox]):not(:disabled)::after {
+input:where([type=radio], [type=checkbox]):not(:disabled)::after {
 	content: '';
 	position: absolute;
 	top: -60%;
@@ -139,7 +139,7 @@ select:not([size], [multiple]) {
 	transition: background-color .3s;
 }
 
-:is([type=radio], [type=checkbox]):hover::after {
+input:where([type=radio], [type=checkbox]):hover::after {
 	background-color: #0001;
 }
 
