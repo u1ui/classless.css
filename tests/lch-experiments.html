@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width">
+    <script src=../../u1/tests/test-init.js type=module></script>
+
+    <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/norm.css/norm.css">
+    <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/base.css/base.css">
+    <link rel=stylesheet href="../variables.css">
+    <link rel=stylesheet href="../classless.css">
+
+    <style>
+        body {
+            padding:2rem;
+        }
+    </style>
+
+
+<body>
+
+
+<style>
+html {
+    --lch-l: 60%;
+    --lch-c: 55.1;
+    --lch-h: 188.9;
+    --ch: var(--lch-c) var(--lch-h);
+    --lch:var(--lch-l) var(--ch);
+
+    --lch2-l:var(--lch-l);
+    --lch2-c:var(--lch-c);
+    --lch2-h:calc(var(--lch-h) - 60);
+    --ch2: var(--lch2-c) var(--lch2-h);
+    --lch2:var(--lch2-l) var(--ch2);
+
+    --color: lch(var(--lch));
+    --color-light: lch( calc(var(--lch-l) + (100% - var(--lch-l)) * .9 ) var(--ch));
+    --color-dark: lch( calc(var(--lch-l) * .65 ) var(--ch));
+
+    --color2: lch(var(--lch2));
+    --color2-light: lch( calc(var(--lch2-l) + (100% - var(--lch2-l)) * .9 ) var(--ch2));
+    --color2-dark: lch( calc(var(--lch2-l) * .65 ) var(--ch2));
+
+    /* named */
+    x--color-bg:   lch(99.9% var(--ch));
+    --color-text: lch( calc(var(--lch-l) * .4 ) var(--ch));
+    --color-area: var(--color-light);
+    --color-line: lch(10% var(--ch));
+
+}
+
+</style>
+
+<div style="background:var(--color)" class="box">color</div>
+<div style="background:var(--color-light)" class="box">light</div>
+<div style="background:var(--color-dark)" class="box">dark</div>
+
+<br>
+
+<div style="background:var(--color2)" class="box">color2</div>
+<div style="background:var(--color2-light)" class="box">light</div>
+<div style="background:var(--color2-dark)" class="box">dark</div>
+
+<br>
+
+<div style="background:var(--color-bg)" class="box">bg</div>
+<div style="background:var(--color-text)" class="box">text</div>
+<div style="background:var(--color-area)" class="box">area</div>
+<div style="background:var(--color-line)" class="box">line</div>
+
+
+<style>
+    .box {
+        background:var(--color);
+        width: 5rem;
+        height: 5rem;
+        display: inline-grid;
+        place-content: center;
+    }
+
+</style>
