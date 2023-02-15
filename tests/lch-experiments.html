@@ -22,31 +22,32 @@
 
 <style>
 html {
-    --lch-l: 60%;
-    --lch-c: 55.1;
-    --lch-h: 188.9;
-    --ch: var(--lch-c) var(--lch-h);
-    --lch:var(--lch-l) var(--ch);
+    --oklch-l: 0.6;
+    --oklch-c: 0.4;
+    --oklch-h: 100;
+    --okch: var(--oklch-c) var(--oklch-h);
+    --oklch:var(--oklch-l) var(--okch);
 
-    --lch2-l:var(--lch-l);
-    --lch2-c:var(--lch-c);
-    --lch2-h:calc(var(--lch-h) - 60);
-    --ch2: var(--lch2-c) var(--lch2-h);
-    --lch2:var(--lch2-l) var(--ch2);
+    X--oklch2-l:var(--oklch-l);
+    --oklch2-c:var(--oklch-c);
+    --oklch2-h:calc(var(--oklch-h) + 120);
+    --okch2: var(--oklch2-c) var(--oklch2-h);
+    --oklch2:var(--oklch-l) var(--okch2);
 
-    --color: lch(var(--lch));
-    --color-light: lch( calc(var(--lch-l) + (100% - var(--lch-l)) * .9 ) var(--ch));
-    --color-dark: lch( calc(var(--lch-l) * .65 ) var(--ch));
+    --color:  oklch(var(--oklch));
+    --color2: oklch(var(--oklch2));
 
-    --color2: lch(var(--lch2));
-    --color2-light: lch( calc(var(--lch2-l) + (100% - var(--lch2-l)) * .9 ) var(--ch2));
-    --color2-dark: lch( calc(var(--lch2-l) * .65 ) var(--ch2));
+    --color-light:  oklch( calc(var(--oklch-l) + (1 - var(--oklch-l)) * .8 ) var(--okch));
+    --color2-light: oklch( calc(var(--oklch-l) + (1 - var(--oklch-l)) * .8 ) var(--okch2));
+
+    --color-dark:   oklch( calc(var(--oklch-l) * .65 ) var(--okch));
+    --color2-dark:  oklch( calc(var(--oklch-l) * .65 ) var(--okch2));
 
     /* named */
-    x--color-bg:   lch(99.9% var(--ch));
-    --color-text: lch( calc(var(--lch-l) * .4 ) var(--ch));
+    x--color-bg:   oklch(99.9% var(--okch));
+    --color-text: oklch( calc(var(--oklch-l) * .4 ) var(--okch));
     --color-area: var(--color-light);
-    --color-line: lch(10% var(--ch));
+    --color-line: oklch(10% var(--okch));
 
 }
 
