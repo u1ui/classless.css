@@ -22,10 +22,11 @@ hr {
     border-width:var(--line-width);
 }
 
-/* zzz after safari 13.7: */
+/* zzz soon, after safari 13.7: */
 :matches(h1,h2,h3,h4,h5,h6,p,ul,ol):first-child { margin-top:0; }
 :matches(h1,h2,h3,h4,h5,h6,p,ul,ol):last-child { margin-bottom:0; }
 
+/* margin-trim on the container may be a good alternative, only safari for now */
 :is(h1,h2,h3,h4,h5,h6,p,ul,ol):first-child { margin-top:0; }
 :is(h1,h2,h3,h4,h5,h6,p,ul,ol):last-child { margin-bottom:0; }
 
@@ -35,22 +36,23 @@ todo:? collapse following headings? needs :has() support
 :is(h1,h2,h3,h4,h5,h6):has(+ :where(h1,h2,h3,h4,h5,h6)) { margin-bottom:0; }
 */
 
+
 table {
     width: 100%;
-    /* so that margins also work: test! *
-    width:-moz-available;
-    width:-webkit-fill-available;
-    width:stretch;
-    */
-    font-size: max(.8rem, 14px);
-}
-tr:not(:last-child) {
-    border-style:solid; /* new: not on td/th any problems? */
-    border-width:0 0 var(--line-width) 0;
-    border-color:var(--color-line);
+    /* take margins into account (not working in firefox) width:-moz-available; width:-webkit-fill-available; width:stretch; */
+    word-break: normal;
 }
 td, th {
     padding: .5em;
+}
+
+dialog {
+    background-color:var(--color-bg);
+    color:var(--color-text);
+}
+
+mark {
+    background-color: hsl(var(--hsl-h), 100%, 70%, 0.5);
 }
 
 /* focus/active style */
@@ -61,35 +63,6 @@ td, th {
 :focus:not(:focus-visible) { outline-width: 0; }
 :active:active { outline-width: .6rem; }
 
-
-blockquote {
-    margin: 0;
-    padding: .5rem;
-    padding-left: 1rem;
-    border-left: .3rem solid var(--color);
-    background-color: var(--color-light);
-}
-
-pre {
-    background-color: var(--color-light);
-    padding: 1rem;
-    overflow-x: auto;
-    border-radius: var(--radius);
-}
-code {
-    font-size: .9em;
-    padding: 0 .3em;
-    background-color: var(--color-light);
-    white-space: pre-wrap;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    line-height: var(--line-height);
-    --line-height: 1;
-}
-
-mark {
-    background-color: hsl(var(--hsl-h), 100%, 70%, 0.5);
-}
 
 /* FORM */
 
@@ -147,39 +120,4 @@ select[size], /* chrome */ select[multiple] {
 
 :focus::placeholder {
     opacity: .2;
-}
-
-table {
-    word-break: normal;
-}
-
-dialog {
-    background-color:var(--color-bg);
-    color:var(--color-text);
-}
-
-/* figure */
-figure {
-    padding:0;
-    margin: 1rem auto;
-    box-shadow: var(--shadow);
-    border-radius: var(--radius);
-    overflow:auto;
-    /*
-    font-size: 1.2rem;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    */
-}
-figure > img {
-    border-radius: var(--radius);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-figcaption {
-    opacity: .7;
-    font-size: .9rem;
-    font-style: italic;
-    text-align: center;
 }
