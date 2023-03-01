@@ -39,7 +39,7 @@ todo:? collapse following headings? needs :has() support
 
 table {
     width: 100%;
-    /* take margins into account (not working in firefox) width:-moz-available; width:-webkit-fill-available; width:stretch; */
+    /* take margins into account (not working in firefox) width:-moz-available; width:-webkit-fill-available; */
     word-break: normal;
 }
 td, th {
