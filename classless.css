@@ -22,19 +22,14 @@ hr {
     border-width:var(--line-width);
 }
 
-/* zzz soon, after safari 13.7: */
+/* zzz, safari > 13.7 *
 :matches(h1,h2,h3,h4,h5,h6,p,ul,ol):first-child { margin-top:0; }
 :matches(h1,h2,h3,h4,h5,h6,p,ul,ol):last-child { margin-bottom:0; }
+*/
 
 /* margin-trim on the container may be a good alternative, only safari for now */
 :is(h1,h2,h3,h4,h5,h6,p,ul,ol):first-child { margin-top:0; }
 :is(h1,h2,h3,h4,h5,h6,p,ul,ol):last-child { margin-bottom:0; }
-
-/*
-todo:? collapse following headings? needs :has() support
-:is(h1,h2,h3,h4,h5,h6)     + :where(h1,h2,h3,h4,h5,h6)  { margin-top:0; }
-:is(h1,h2,h3,h4,h5,h6):has(+ :where(h1,h2,h3,h4,h5,h6)) { margin-bottom:0; }
-*/
 
 
 table {
