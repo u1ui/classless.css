@@ -69,7 +69,7 @@ select:not([size], [multiple]) {
 	padding: 0;
 }
 
-[type=radio]:checked, [type=checkbox]:checked {
+:is([type=radio],[type=checkbox]):checked {
 	border-color: var(--color, blue);
 }
 
@@ -89,35 +89,31 @@ select:not([size], [multiple]) {
 	font-size: .65em;
 }
 
-[type=radio]:checked::before, [type=checkbox]:checked::before {
-	background-color: var(--color, blue);
+:is([type=radio],[type=checkbox]):checked::before {
+		background-color: var(--color, blue);
 }
 
 /* checkbox */
-
 [type=checkbox]:checked::before {
 	content: "✔";
 }
 
 /* radio */
-
 [type=radio] {
 	border-radius: 100%;
 }
-
 [type=radio]::before {
 	border-radius: inherit;
 	border: .15em solid #fff;
 }
 
 /* disabled */
-[type=radio]:disabled, [type=checkbox]:disabled {
-	opacity: .5;
+:is([type=radio],[type=checkbox]):disabled {
+		opacity: .5;
 }
 
 /* indeterminate */
-
-[type=radio]:indeterminate::before, [type=checkbox]:indeterminate::before {
+:is([type=radio],[type=checkbox]):indeterminate::before {
 	color: currentColor;
 	font-size: .8em;
 	content: "─";
@@ -259,8 +255,7 @@ select, textarea { --scrollbar-thin: ; }
 }
 
 /* autofill (chrome) */
-:-webkit-autofill {
-	/* also works for firefox! */
+:-webkit-autofill { /* also works for firefox! */
 	filter: none;
 	box-shadow: 0 0 0 100px var(--color-light) inset;
 }
