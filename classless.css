@@ -59,7 +59,8 @@ mark {
 /* all inputs, buttons */
 /* is:(input, textarea, select, button, .btn, ::file-selector-button, ::-webkit-file-upload-button) { forgiving :is-selector usable after safari 13.7 */
 input, textarea, select, button, .btn {
-    padding: .2em .4em;
+    padding-inline: .4em;
+    padding-block: .2em;
     font-family:inherit;
     max-width: 100%;
     /* todo: new ok? */
@@ -86,8 +87,7 @@ button, .btn { /* The selector is not invalidated although ::-webkit-file-upload
     background-color: var(--color);
     color: var(--color-bg);
     border-color: transparent;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-inline: 1em;
     transition: background-color .1s; /* better every property? does not get along with focus-animation */
 
     /* for .btn */
